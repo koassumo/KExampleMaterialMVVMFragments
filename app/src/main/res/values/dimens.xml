@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="standard_padding_or_margin_step">16dp</dimen>
+
+    <dimen name="heading_padding_top">22dp</dimen>
+    <dimen name="heading_padding_left">16dp</dimen>
+    <dimen name="heading_size">22dp</dimen>
+    <dimen name="hint_padding_top">4dp</dimen>
+    <dimen name="divider_line_height">1dp</dimen>
+    <dimen name="divider_margin_top">10dp</dimen>
+
+</resources>

@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">KExampleMaterialMVVMFragments</string>
+    <string name="fist_fragment">First fragment</string>
+    <string name="btn_edit_text">EditText</string>
+    <string name="btn_bottom_sheet">BottomSheet</string>
+
+    <string name="hint_outlined_box">hint(Label) - OutlinedBox</string>
+    <string name="hint_filled_box">hint(Label) - FilledBox</string>
+    <string name="hint">hint(Label) -подсказка</string>
+    <string name="placeholder_text">placeholderText</string>
+    <string name="helper_text_1">helperText - вспомогательный: \n
+        в InputLayout - endIconMode=\"password_toggle\"\n
+        в EditText - inputType=\"textPassword\"\n
+        counterEnabled="true", counterMaxLength="20" - при превышении обод меняет цвет
+    </string>
+    <string name="helper_text_2">"endIconCheckable=\"true\", endIconDrawable=\"@drawable/ic_wikipedia\"\nendIconMode=\"custom\" - иконка видна сразу"</string>
+    <string name="helper_text_3">endIconMode=\"clear_text\" - т.е. иконку сразу не видно, возникает когда текст набираешь</string>
+    <string name="favourite">favourite</string>
+    <string name="settings">settings</string>
+    <string name="search">Search</string>
+    <string name="choice_group_hint">RadioButton analog  singleSelection=\"true\"</string>
+    <string name="chip_group_hint">тут с прокруткой HorizontalScrollView (можно singleLine=\"true\", но без прокрутки)</string>
+    <string name="click_to_try">Click to try</string>
+    <string name="default_chip">Default chip</string>
+    <string name="entry_chip">Entry chip</string>
+    <string name="choice_chip">Choice chip</string>
+    <string name="action_chip">Action chip</string>
+    <string name="filter_chip">Filter chip</string>
+    <string name="title_different_types_chips">Different types</string>
+    <string name="title_different_recolors_chips">Different colors and others</string>
+    <string name="normal_text_on_background">Normal text on Background fills room here. Normal text on Background fills room here. Normal text on Background fills room here.</string>
+    <string name="top_app_bar">Top App Bar</string>
+    <string name="change_theme_button">Change!</string>
+    <string name="text_button">Text btn</string>
+    <string name="outlined_button">Outlined btn</string>
+    <string name="btn_buttons">Buttons</string>
+    <string name="btn_bottom_app_bar">BottomAppBar</string>
+    <string name="btn_chips">Chips</string>
+    <string name="btn_themes">Themes</string>
+    <string name="btn_typography">Typography</string>
+    <string name="btn_nav_bar">NavigationBar</string>
+    <string name="hello">Hello</string>
+    <string name="headline1">Headline1: Light, 96sp, Sentence</string>
+    <string name="headline2">Headline2: Light, 60sp, Sentence</string>
+    <string name="headline3">Headline3: Regular, 48sp, Sentence</string>
+    <string name="headline4">Headline4: Regular, 34sp, Sentence</string>
+    <string name="headline5">Headline5: Regular, 24sp, Sentence</string>
+    <string name="headline6">Headline6: Medium, 20sp, Sentence</string>
+    <string name="subtitle1">Subtitle1: Regular, 16sp, Sentence (!!!!!!!!!!!  =Body1   !!!!!!!!!!)</string>
+    <string name="subtitle2">Subtitle2: Medium, 14sp, Sentence</string>
+    <string name="body1">Body1: Regular, 16sp, Sentence (!!!!!!!!!!!  =Subtitle1   !!!!!!!!!!)</string>
+    <string name="body2">Body2: Regular, 14sp, Sentence</string>
+    <string name="button">Button: Medium, 14sp, All Caps</string>
+    <string name="caption">Caption: Regular, 12sp, Sentence</string>
+    <string name="overline">Overline: Regular, 10sp, All Caps</string>
+    <string name="btn_rv">RecycleView</string>
+</resources>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragmentsettings.TypographyFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Headline1"
+            android:text="@string/hello" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="@string/headline1" />
+        <View style="@style/divider_line_style" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Headline2"
+            android:text="@string/hello" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="@string/headline2" />
+        <View style="@style/divider_line_style" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Headline3"
+            android:text="@string/hello" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="@string/headline3" />
+        <View style="@style/divider_line_style" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Headline4"
+            android:text="@string/hello" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="@string/headline4" />
+        <View style="@style/divider_line_style" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:text="@string/hello" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="@string/headline5" />
+        <View style="@style/divider_line_style" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:text="@string/hello" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="@string/headline6" />
+        <View style="@style/divider_line_style" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:text="@string/hello" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="@string/subtitle1" />
+        <View style="@style/divider_line_style" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:text="@string/hello" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="@string/subtitle2" />
+        <View style="@style/divider_line_style" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:text="@string/hello" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="@string/body1" />
+        <View style="@style/divider_line_style" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="@string/hello" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="@string/body2" />
+        <View style="@style/divider_line_style" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Button"
+            android:text="@string/hello" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="@string/button" />
+        <View style="@style/divider_line_style" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:text="@string/hello" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="@string/caption" />
+        <View style="@style/divider_line_style" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Overline"
+            android:text="@string/hello" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="@string/overline" />
+        <View style="@style/divider_line_style" />
+
+    </LinearLayout>
+</ScrollView>
