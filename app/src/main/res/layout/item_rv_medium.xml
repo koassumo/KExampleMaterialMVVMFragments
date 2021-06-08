@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/step_between_rv_items_medium"
+    android:layout_marginEnd="@dimen/step_between_rv_items_medium"
+    android:layout_marginBottom="@dimen/step_between_rv_items_medium"
+    app:cardCornerRadius="@dimen/radius_normal"
+    app:strokeWidth="@dimen/stroke_width_normal"
+    app:cardElevation="@dimen/elevation_small"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="10dp" />
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="sldkfjsldfkjsdlakj sdfkladj lj sdlfkjlkfjdsa lkdsfjalkj sdaflk dsflkj sdfl sdflkjlkj dfslkj dfljlj dfsl slsafdkj lfdsalkj fdsdfgdfgs  sdgf fdsgdfgs sdfgsdfgd fsdfg sdfgdf dfs sdfg sdf sfdgdf  sdfgfdg sdfdfg dfg sdfg sdfg alkj dfslk sfda"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_upward_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_arrow_upward_24" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_downward_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_upward_item"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_remove_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_downward_item"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_add_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_remove_item"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_add_box_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

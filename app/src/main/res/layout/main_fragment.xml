@@ -1,131 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.main.MainFragment">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFragmentButtons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_buttons"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/btnFragmentEditText"
-        />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFragmentEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_edit_text"
-        app:layout_constraintVertical_chainStyle="spread"
-        app:layout_constraintTop_toBottomOf="@+id/btnFragmentButtons"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/btnFragmentBottomSheet"
-        />
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.main.MainFragment">
 
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFragmentBottomSheet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_bottom_sheet"
-        app:layout_constraintVertical_chainStyle="spread"
-        app:layout_constraintTop_toBottomOf="@+id/btnFragmentEditText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/btnFragmentBottomAppBar"
-        />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFragmentBottomAppBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_bottom_app_bar"
-        app:layout_constraintVertical_chainStyle="spread"
-        app:layout_constraintTop_toBottomOf="@+id/btnFragmentBottomSheet"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/btnFragmentChips"
-        />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFragmentChips"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_chips"
-        app:layout_constraintVertical_chainStyle="spread"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintTop_toBottomOf="@+id/btnFragmentBottomAppBar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/btnFragmentNavBar"
-        />
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/heading_text_style"
+            android:text="@string/recycle_view" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_demo_rv"
+            style="@style/padding_start_top_end_normal_rv"
+            android:clipToPadding="false"
+            android:orientation="horizontal" />
 
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFragmentNavBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_nav_bar"
-        app:layout_constraintVertical_chainStyle="spread"
-        app:layout_constraintTop_toBottomOf="@+id/btnFragmentChips"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/btnFragmentRV"
-        />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFragmentRV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_rv"
-        app:layout_constraintVertical_chainStyle="spread"
-        app:layout_constraintTop_toBottomOf="@+id/btnFragmentNavBar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="end"
-        app:constraint_referenced_ids="btnFragmentNavBar, btnFragmentNavBar" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFragmentThemes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_themes"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="@id/barrier7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/btnFragmentTypography"
-        />
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/heading_text_style"
+            android:text="@string/buttons" />
+        <!--  RV Не забываем !!!!! android:clipToPadding="false"-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_buttons"
+            style="@style/padding_start_top_end_normal_rv"
+            android:clipToPadding="false"
+            android:orientation="horizontal" />
 
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFragmentTypography"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_typography"
-        app:layout_constraintVertical_chainStyle="spread"
-        app:layout_constraintTop_toBottomOf="@id/btnFragmentThemes"
-        app:layout_constraintStart_toStartOf="@id/barrier7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/heading_text_style"
+            android:text="@string/chips" />
+        <!--  RV Не забываем !!!!! android:clipToPadding="false"-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_chips"
+            style="@style/padding_start_top_end_normal_rv"
+            android:clipToPadding="false"
+            android:orientation="horizontal" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/heading_text_style"
+            android:text="@string/constrained_layout" />
+        <!--  RV Не забываем !!!!! android:clipToPadding="false"-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_constraint_layout"
+            style="@style/padding_start_top_end_normal_rv"
+            android:clipToPadding="false"
+            android:orientation="horizontal" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/heading_text_style"
+            android:text="@string/edit_text" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_edit_text"
+            style="@style/padding_start_top_end_normal_rv"
+            android:clipToPadding="false"
+            android:orientation="horizontal" />
 
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/heading_text_style"
+            android:text="@string/bottom_sheet" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_bottom_sheet"
+            style="@style/padding_start_top_end_normal_rv"
+            android:clipToPadding="false"
+            android:orientation="horizontal" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/heading_text_style"
+            android:text="@string/bottom_navigation" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_bottom_nav"
+            style="@style/padding_start_top_end_normal_rv"
+            android:clipToPadding="false"
+            android:orientation="horizontal" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/heading_text_style"
+            android:text="@string/bottom_app_bar" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_bottom_app_bar"
+            style="@style/padding_start_top_end_normal_rv"
+            android:clipToPadding="false"
+            android:orientation="horizontal" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/heading_text_style"
+            android:text="@string/typography" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_typography"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="@dimen/step_top_normal"
+            android:layout_marginStart="@dimen/step_start_normal"
+            android:layout_marginEnd="@dimen/step_end_normal"
+            app:cardCornerRadius="@dimen/radius_normal"
+            app:strokeWidth="@dimen/stroke_width_normal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/rv_typography"
+                android:scaleType="centerCrop"
+                android:alpha="@dimen/alpha_img_large"/>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/heading_text_style"
+            android:text="@string/themes" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_themes"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="@dimen/step_top_normal"
+            android:layout_marginStart="@dimen/step_start_normal"
+            android:layout_marginEnd="@dimen/step_end_normal"
+            app:cardCornerRadius="@dimen/radius_normal"
+            app:strokeWidth="@dimen/stroke_width_normal"
+            app:cardElevation="@dimen/elevation_normal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/rv_themes"
+                android:scaleType="centerCrop"
+                android:alpha="@dimen/alpha_img_large"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--            <ImageView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:src="@drawable/blank"-->
+        <!--                android:scaleType="centerCrop"-->
+        <!--                android:alpha="@dimen/alpha_img_small"-->
+        <!--                app:tint="@color/green_700"-->
+        <!--                />-->
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

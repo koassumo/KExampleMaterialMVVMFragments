@@ -17,24 +17,24 @@
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/standard_padding_or_margin_step"
-            android:layout_marginTop="@dimen/standard_padding_or_margin_step"
+            android:layout_marginStart="@dimen/step_start_normal"
+            android:layout_marginTop="@dimen/step_top_normal"
             android:text="Contained (Raised) Button" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/standard_padding_or_margin_step"
-            android:layout_marginTop="@dimen/standard_padding_or_margin_step"
+            android:layout_marginStart="@dimen/step_start_normal"
+            android:layout_marginTop="@dimen/step_top_normal"
             android:text="Outlined Button" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/standard_padding_or_margin_step"
-            android:layout_marginTop="@dimen/standard_padding_or_margin_step"
+            android:layout_marginStart="@dimen/step_start_normal"
+            android:layout_marginTop="@dimen/step_top_normal"
             android:text="Text Button" />
 
     </LinearLayout>

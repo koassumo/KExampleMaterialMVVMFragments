@@ -54,4 +54,17 @@
     <string name="caption">Caption: Regular, 12sp, Sentence</string>
     <string name="overline">Overline: Regular, 10sp, All Caps</string>
     <string name="btn_rv">RecycleView</string>
+    <string name="content_description_media">no description media</string>
+    <string name="title">no title</string>
+    <string name="buttons">Buttons</string>
+    <string name="edit_text">Text Fields (Edit Text)</string>
+    <string name="bottom_sheet">Bottom Sheet</string>
+    <string name="bottom_app_bar">Bottom App Bar</string>
+    <string name="chips">Chips</string>
+    <string name="tabs">Tabs</string>
+    <string name="bottom_navigation">Bottom Navigation (Tabs)</string>
+    <string name="recycle_view">Recycle View</string>
+    <string name="typography">Typography</string>
+    <string name="themes">Themes</string>
+    <string name="constrained_layout">Constrained Layout</string>
 </resources>
