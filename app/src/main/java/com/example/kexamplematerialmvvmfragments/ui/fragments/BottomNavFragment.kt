@@ -13,10 +13,10 @@ import com.example.kexamplematerialmvvmfragments.ui.fragments.demonavbarview.Ite
 import com.example.kexamplematerialmvvmfragments.viewmodel.NavBarViewModel
 import kotlinx.android.synthetic.main.nav_bar_fragment.*
 
-class NavBarFragment : Fragment() {
+class BottomNavFragment : Fragment() {
 
     companion object {
-        fun newInstance() = NavBarFragment()
+        fun newInstance() = BottomNavFragment()
     }
 
     private lateinit var viewModel: NavBarViewModel

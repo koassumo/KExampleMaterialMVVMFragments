@@ -16,16 +16,16 @@
             style="@style/TextAppearance.MaterialComponents.Headline5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/standard_padding_or_margin_step"
-            android:layout_marginTop="@dimen/standard_padding_or_margin_step"
+            android:layout_marginStart="@dimen/step_start_normal"
+            android:layout_marginTop="@dimen/step_top_normal"
             android:text="Single Selected" />
 
         <com.google.android.material.button.MaterialButtonToggleGroup
             android:id="@+id/toggleButtonSingle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/standard_padding_or_margin_step"
-            android:layout_marginTop="@dimen/standard_padding_or_margin_step"
+            android:layout_marginStart="@dimen/step_start_normal"
+            android:layout_marginTop="@dimen/step_top_normal"
             app:singleSelection="true">
 
             <Button
@@ -56,16 +56,16 @@
             style="@style/TextAppearance.MaterialComponents.Headline5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/standard_padding_or_margin_step"
-            android:layout_marginTop="@dimen/standard_padding_or_margin_step"
+            android:layout_marginStart="@dimen/step_start_normal"
+            android:layout_marginTop="@dimen/step_top_normal"
             android:text="Multi Selected" />
 
         <com.google.android.material.button.MaterialButtonToggleGroup
             android:id="@+id/toggleButtonMulti"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/standard_padding_or_margin_step"
-            android:layout_marginTop="@dimen/standard_padding_or_margin_step">
+            android:layout_marginStart="@dimen/step_start_normal"
+            android:layout_marginTop="@dimen/step_top_normal">
 
             <Button
                 android:id="@+id/buttonMulti1"

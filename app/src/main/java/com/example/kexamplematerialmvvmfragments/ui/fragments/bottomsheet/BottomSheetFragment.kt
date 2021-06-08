@@ -1,4 +1,4 @@
-package com.example.kexamplematerialmvvmfragments.ui.fragments
+package com.example.kexamplematerialmvvmfragments.ui.fragments.bottomsheet
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle

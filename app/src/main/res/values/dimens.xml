@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="standard_padding_or_margin_step">16dp</dimen>
-
     <dimen name="heading_padding_top">22dp</dimen>
     <dimen name="heading_padding_left">16dp</dimen>
     <dimen name="heading_size">22dp</dimen>
     <dimen name="hint_padding_top">4dp</dimen>
-    <dimen name="divider_line_height">1dp</dimen>
-    <dimen name="divider_margin_top">10dp</dimen>
 
+
+    <!--small-->
+    <dimen name="step_start_small">12dp</dimen>
+    <dimen name="step_bottom_small">6dp</dimen>
+    <!--normal-->
+    <dimen name="step_top_normal">12dp</dimen>
+    <dimen name="step_start_normal">12dp</dimen>
+    <dimen name="step_end_normal">12dp</dimen>
+    <!--heading-->
+    <dimen name="step_top_heading">36dp</dimen>
+    <dimen name="step_start_heading">12dp</dimen>
+    <!--others-->
+    <dimen name="step_zero">0dp</dimen>
+    <dimen name="step_between_rv_items_small">6dp</dimen>
+    <dimen name="step_between_rv_items_medium">8dp</dimen>
+    <dimen name="divider_line_height">3dp</dimen>
+    <dimen name="divider_margin_top">10dp</dimen>
+    <dimen name="radius_normal">12dp</dimen>
+    <dimen name="stroke_width_normal">1dp</dimen>
+
+    <item name="alpha_img_small" type="dimen" format="float">0.2</item>
+    <item name="alpha_img_medium" type="dimen" format="float">0.5</item>
+    <dimen name="alpha_img_large">1</dimen>
+    <dimen name="elevation_normal">5dp</dimen>
+    <dimen name="elevation_small">2dp</dimen>
+    <dimen name="elevation_large">6dp</dimen>
 </resources>

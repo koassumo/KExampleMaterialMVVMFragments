@@ -1,6 +1,6 @@
 package com.example.kexamplematerialmvvmfragments.model.entity
 
-class ItemRV (
+class NoteDemoRV (
     //var mDrawable: Drawable? = null,
     var mId: String? = null,
     var mTitle: String? = null,
