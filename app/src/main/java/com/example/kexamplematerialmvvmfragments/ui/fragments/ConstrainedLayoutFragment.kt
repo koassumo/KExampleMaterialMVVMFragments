@@ -9,9 +9,9 @@ import android.view.ViewGroup
 import com.example.kexamplematerialmvvmfragments.viewmodel.ConstrainedLayoutViewModel
 import com.example.kexamplematerialmvvmfragments.R
 import com.example.kexamplematerialmvvmfragments.ui.fragments.bottomsheet.BottomSheetFragment
-import com.example.kexamplematerialmvvmfragments.ui.fragments.demorv.RVFragment
-import com.example.kexamplematerialmvvmfragments.ui.fragmentsettings.ThemesFragment
-import com.example.kexamplematerialmvvmfragments.ui.fragmentsettings.TypographyFragment
+import com.example.kexamplematerialmvvmfragments.ui.fragments_demo_rv.demorv.RVFragment
+import com.example.kexamplematerialmvvmfragments.ui.fragments_settings.ThemesFragment
+import com.example.kexamplematerialmvvmfragments.ui.fragments_settings.TypographyFragment
 import kotlinx.android.synthetic.main.constrained_layout_fragment.*
 
 class ConstrainedLayoutFragment : Fragment() {

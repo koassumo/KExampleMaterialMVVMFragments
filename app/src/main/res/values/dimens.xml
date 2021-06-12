@@ -14,6 +14,10 @@
     <dimen name="step_top_normal">12dp</dimen>
     <dimen name="step_start_normal">12dp</dimen>
     <dimen name="step_end_normal">12dp</dimen>
+
+    <!--2x-->
+    <dimen name="step_start_2x">24dp</dimen>
+
     <!--heading-->
     <dimen name="step_top_heading">36dp</dimen>
     <dimen name="step_start_heading">12dp</dimen>

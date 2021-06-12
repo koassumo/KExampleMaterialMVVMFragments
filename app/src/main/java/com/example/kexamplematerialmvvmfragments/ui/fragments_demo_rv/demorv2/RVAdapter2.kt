@@ -1,4 +1,4 @@
-package com.example.kexamplematerialmvvmfragments.ui.fragments.demorv2
+package com.example.kexamplematerialmvvmfragments.ui.fragments_demo_rv.demorv2
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.item_rv_small_simple.view.*
 import kotlinx.android.synthetic.main.item_rv_small_simple.view.tv_description
 import kotlinx.android.synthetic.main.item_rv_small_simple.view.tv_title
 
-class RVAdapter2(fragmentContext: Context) : RecyclerView.Adapter<RVAdapter2.BaseViewHolder>() {
+class RVAdapter2 (fragmentContext: Context) : RecyclerView.Adapter<RVAdapter2.BaseViewHolder>() {
 
     companion object {
         private const val TYPE_SMALL = 1

@@ -3,7 +3,6 @@ package com.example.kexamplematerialmvvmfragments.ui.main
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.kexamplematerialmvvmfragments.R
-import com.example.kexamplematerialmvvmfragments.ui.fragmentsettings.ThemesFragment
 
 class MainActivity : AppCompatActivity() {
 

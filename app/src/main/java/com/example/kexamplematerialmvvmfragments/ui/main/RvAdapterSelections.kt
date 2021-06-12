@@ -8,14 +8,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kexamplematerialmvvmfragments.R
 import com.example.kexamplematerialmvvmfragments.model.entity.NoteRv
-import com.example.kexamplematerialmvvmfragments.ui.fragments_demo_rv.demorv.RVFragment
-import com.example.kexamplematerialmvvmfragments.ui.fragments_demo_rv.demorv2.RVFragment2
-import com.example.kexamplematerialmvvmfragments.ui.fragments_demo_rv.demorv3.RVFragment3
-import com.example.kexamplematerialmvvmfragments.ui.fragments_demo_rv.demorv4.RVFragment4
+import com.example.kexamplematerialmvvmfragments.ui.fragments.bottomsheet.BottomSheetFragment
+import com.example.kexamplematerialmvvmfragments.ui.fragments.selections.CheckboxesFragment
+import com.example.kexamplematerialmvvmfragments.ui.fragments.selections.RadioFragment
+import com.example.kexamplematerialmvvmfragments.ui.fragments.selections.SwitchesFragment
 
 import kotlinx.android.synthetic.main.item_rv_main_common.view.*
 
-class RvAdapterDemoRV (fragmentContext: Context) : RecyclerView.Adapter<RvAdapterDemoRV.ViewHolder>() {
+class RvAdapterSelections (fragmentContext: Context) : RecyclerView.Adapter<RvAdapterSelections.ViewHolder> (){
 
     val adapterContext: Context = fragmentContext
     var adapterList: List<NoteRv> = listOf()
@@ -31,41 +31,31 @@ class RvAdapterDemoRV (fragmentContext: Context) : RecyclerView.Adapter<RvAdapte
     // (#1) при создании vh - onCreateViewHolder (описан ниже) - в него передается itemView
     // (#2) при вызове у vh метода bind (описан ниже) - в него передается данные из array, чтобы связать с itemView
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-        // "находим" (для kotlin) нужные вьюшки и связываем их
         fun bind(adapterOnlyOneItemData: NoteRv) {
             itemView.tv_title.text = adapterOnlyOneItemData.title
-            when (adapterOnlyOneItemData.imageName) {
-                "rv_demo_rv_1" -> itemView.iv_pic.setImageResource(R.drawable.rv_recycle_view)
-                "rv_demo_rv_2" -> itemView.iv_pic.setImageResource(R.drawable.rv_recycle_view)
-                "rv_demo_rv_3" -> itemView.iv_pic.setImageResource(R.drawable.rv_recycle_view)
-                "rv_demo_rv_4" -> itemView.iv_pic.setImageResource(R.drawable.rv_recycle_view)
-            }
-
+//            when (adapterOnlyOneItemData.imageName) {
+//                "rv_bottom_sheet_flex" -> itemView.iv_pic.setImageResource(R.drawable.rv_bottom_sheet_flex)
+//                "rv_bottom_sheet_persistent" -> itemView.iv_pic.setImageResource(R.drawable.rv_bottom_sheet_flex)
+//            }
             itemView.setOnClickListener {
-                val ttt: String = it.tv_title.text as String
+//                val ttt: String = it.tv_title.text as String
                 val activity = adapterContext as AppCompatActivity
-                //вариант val activity = it.context as AppCompatActivity
-                when (ttt) {
-                    "Demo Recycler View 1" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
-                        R.id.container, RVFragment()
-                    )?.addToBackStack(null)?.commit()
-                    "Demo Recycler View 2" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
-                        R.id.container, RVFragment2()
-                    )?.addToBackStack(null)?.commit()
-                    "Demo Recycler View 3" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
-                        R.id.container, RVFragment3()
-                    )?.addToBackStack(null)?.commit()
-                    "Demo Recycler View 4" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
-                        R.id.container, RVFragment4()
-                    )?.addToBackStack(null)?.commit()
+                when (layoutPosition) {
+                    0 -> activity.supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, CheckboxesFragment()).addToBackStack(null)
+                        .commit()
+                    1 -> activity.supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, RadioFragment()).addToBackStack(null)
+                        .commit()
+                    2 -> activity.supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, SwitchesFragment()).addToBackStack(null)
+                        .commit()
                 }
             }
         }
     }
 
     // Три обязательных переопределяемых класса адаптера:
-
     // #1. Создать vh путем передачи в него item_view.xml
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
         ViewHolder(
@@ -73,7 +63,7 @@ class RvAdapterDemoRV (fragmentContext: Context) : RecyclerView.Adapter<RvAdapte
         )
 
     // #2. Передать строчку из arrayList во vh через метод bind
-    override fun onBindViewHolder(holder: RvAdapterDemoRV.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(adapterList[position])  // только одна строчка ! в vh будет - adapterOnlyOneItemData
     }
 
@@ -81,6 +71,4 @@ class RvAdapterDemoRV (fragmentContext: Context) : RecyclerView.Adapter<RvAdapte
     override fun getItemCount(): Int {
         return adapterList.size
     }
-
-
 }

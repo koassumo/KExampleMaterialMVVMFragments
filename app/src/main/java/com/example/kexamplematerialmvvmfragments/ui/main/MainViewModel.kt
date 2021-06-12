@@ -16,6 +16,7 @@ class MainViewModel : ViewModel() {
 
 
     //   <<<<<<<<<<<<<<<<<<<[[   1. выставляем вышки
+
     val liveDataButtons = MutableLiveData<List<NoteRvButton>>()
     val liveDataEditView = MutableLiveData<List<NoteRvEditView>>()
     val liveDataBottomSheet = MutableLiveData<List<NoteRvBottomSheet>>()
@@ -24,6 +25,7 @@ class MainViewModel : ViewModel() {
     val liveDataBottomNav = MutableLiveData<List<NoteRv>>()
     val liveDataBottomAppBar = MutableLiveData<List<NoteRv>>()
     val liveDataDemoRV = MutableLiveData<List<NoteRv>>()
+    val liveDataSelections = MutableLiveData <List<NoteRv>> ()
 
     init {
         updateListFirst()
@@ -40,5 +42,6 @@ class MainViewModel : ViewModel() {
         liveDataBottomNav.value = RepositoryRv.getListRvBottomNav()
         liveDataBottomAppBar.value = RepositoryRv.getListRvBottomAppBar()
         liveDataDemoRV.value = RepositoryRv.getListRvDemoRV()
+        liveDataSelections.value = RepositoryRv.getListRvSelections()
     }
 }

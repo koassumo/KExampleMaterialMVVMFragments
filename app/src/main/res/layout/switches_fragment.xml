@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.selections.SwitchesFragment">
+
+    <!-- хак для отображения текста справа от switch
+    но с padding тогда сложно
+    android:layoutDirection="rtl"-->
+
+    <!-- для определения room/space можно испльзовать
+    android:layout_width="match_parent" -->
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/step_start_2x"
+        android:paddingStart="@dimen/step_start_2x"
+        android:paddingEnd="@dimen/step_start_2x"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:text="@string/switch_1"/>
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/step_start_2x"
+        android:paddingStart="@dimen/step_start_2x"
+        android:paddingEnd="@dimen/step_start_2x"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:text="@string/switch_2"/>
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/step_start_2x"
+        android:paddingStart="@dimen/step_start_2x"
+        android:paddingEnd="@dimen/step_start_2x"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:text="@string/switch_3"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

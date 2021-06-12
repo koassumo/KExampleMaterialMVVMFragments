@@ -3,6 +3,13 @@ package com.example.kexamplematerialmvvmfragments.model
 import com.example.kexamplematerialmvvmfragments.model.entity.NoteRv
 
 object RepositoryRv {
+
+    private val listNoteRvSelections: List<NoteRv> = listOf(
+        NoteRv("Checkboxes", "rv_checkboxes"),
+        NoteRv("Radio Buttons", "rv_radio"),
+        NoteRv("Switches", "rv_switches")
+    )
+
     private val listNoteRvChips: List<NoteRv> = listOf(
         NoteRv("Chips1", "rv_chips_1"),
         NoteRv("Chips2", "rv_chips_2"),
@@ -30,9 +37,11 @@ object RepositoryRv {
     private val listNoteRvDemoRV: List<NoteRv> = listOf(
         NoteRv("Demo Recycler View 1", "rv_demo_rv_1"),
         NoteRv("Demo Recycler View 2", "rv_demo_rv_2"),
-        NoteRv("Demo Recycler View 3", "rv_demo_rv_3")
+        NoteRv("Demo Recycler View 3", "rv_demo_rv_3"),
+        NoteRv("Demo Recycler View 4", "rv_demo_rv_4")
     )
 
+    fun getListRvSelections () = listNoteRvSelections
     fun getListRvChips () = listNoteRvChips
     fun getListRvConstraintLayout () = listNoteRvConstraintLayout
     fun getListRvBottomNav () = listNoteBottomNav

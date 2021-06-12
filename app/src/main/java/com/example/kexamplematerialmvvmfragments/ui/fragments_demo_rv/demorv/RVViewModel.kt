@@ -1,4 +1,4 @@
-package com.example.kexamplematerialmvvmfragments.ui.fragments.demorv
+package com.example.kexamplematerialmvvmfragments.ui.fragments_demo_rv.demorv
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

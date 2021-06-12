@@ -67,4 +67,12 @@
     <string name="typography">Typography</string>
     <string name="themes">Themes</string>
     <string name="constrained_layout">Constrained Layout</string>
+    <string name="selection_controls">Selection Controls</string>
+    <string name="label_mars">Mars</string>
+    <string name="label_luna">Luna</string>
+    <string name="label_saturn">Saturn</string>
+    <string name="label_sun">Sun</string>
+    <string name="switch_1">Switch 1</string>
+    <string name="switch_2">Switch 2</string>
+    <string name="switch_3">Switch 3</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.kexamplematerialmvvmfragments.ui.fragments.demorv
+package com.example.kexamplematerialmvvmfragments.ui.fragments_demo_rv.demorv
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -27,7 +27,9 @@ class RVAdapter (fragmentContext: Context): RecyclerView.Adapter<RecyclerView.Vi
             notifyDataSetChanged()
         }
 
-    // ВАРИАНТ №1. Каждый холдер отдельно
+    // ---------------------------------------------------------
+    // ВАРИАНТ №1. Каждый холдер отдельно (без базового холдера)
+    // ---------------------------------------------------------
 
     // Первый ViewHolder
     inner class SmallViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -86,8 +88,8 @@ class RVAdapter (fragmentContext: Context): RecyclerView.Adapter<RecyclerView.Vi
         }
     }
 
-    // Метод получает как общий холдер, и определяет его конкретный вид через as
     // Передать строчку из arrayList во vh через метод bind
+    // В данном варианте: метод получает как общий холдер, и определяет его конкретный вид через as
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         // тут приходится определять какой именно холдер нам передали
         // нельзя просто вызвать метод bind, т.к. он не override и не обязан содержаться к холдере

@@ -1,10 +1,9 @@
-package com.example.kexamplematerialmvvmfragments.ui.fragmentsettings
+package com.example.kexamplematerialmvvmfragments.ui.fragments_settings
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kexamplematerialmvvmfragments.R
 import com.example.kexamplematerialmvvmfragments.model.entity.NoteRvTypography

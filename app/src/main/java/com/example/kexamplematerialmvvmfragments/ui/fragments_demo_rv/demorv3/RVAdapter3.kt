@@ -1,4 +1,4 @@
-package com.example.kexamplematerialmvvmfragments.ui.fragments.demorv3
+package com.example.kexamplematerialmvvmfragments.ui.fragments_demo_rv.demorv3
 
 import android.content.Context
 import android.view.LayoutInflater

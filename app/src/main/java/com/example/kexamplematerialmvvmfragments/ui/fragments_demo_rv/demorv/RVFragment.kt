@@ -1,4 +1,4 @@
-package com.example.kexamplematerialmvvmfragments.ui.fragments.demorv2
+package com.example.kexamplematerialmvvmfragments.ui.fragments_demo_rv.demorv
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -12,32 +12,37 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kexamplematerialmvvmfragments.R
 import kotlinx.android.synthetic.main.r_v_fragment.*
 
-class RVFragment2 : Fragment() {
+class RVFragment : Fragment() {
 
     companion object {
-        fun newInstance() = RVFragment2()
+        fun newInstance() = RVFragment()
     }
 
     // (1) объявляем mViewModel
-    private lateinit var viewModel: RVViewModel2
+    private lateinit var viewModel: RVViewModel
     // объявляем adapter
-    lateinit var adapter: RVAdapter2
+    lateinit var adapter : RVAdapter
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.r_v_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         // (2) наполнение mViewModel
-        viewModel = ViewModelProvider(this).get(RVViewModel2::class.java)
+        viewModel = ViewModelProvider(this).get(RVViewModel::class.java)
 
-        adapter = RVAdapter2 (context!!)
+        // инициализируем адаптер, кладем его на rv
+        adapter = RVAdapter(context!!)
         rv_items.adapter = adapter
         rv_items.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         rv_items.addItemDecoration(DividerItemDecoration(context, LinearLayoutManager.VERTICAL))
-        //fab_demo_rv.setOnClickListener { adapter.appendItem() }
+
     }
+
 
     override fun onStart() {
         super.onStart()
@@ -45,9 +50,10 @@ class RVFragment2 : Fragment() {
 //    <<<<<<<<<<<<<<<<[[[  2. Подписка на liveData
 //    <<<<<<<<<<<<<<<<[[[  *4. И сразу при Подписке описание реакции подписчика, 4ка выполнится позже
         viewModel.liveData.observe(this, Observer {
-            adapter.aListPair = it     // вызов set
+            adapter.aListNoteDemos = it     // вызов set
         })
     }
+
 
 
 

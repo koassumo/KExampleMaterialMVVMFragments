@@ -9,8 +9,8 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kexamplematerialmvvmfragments.R
-import com.example.kexamplematerialmvvmfragments.ui.fragmentsettings.ThemesFragment
-import com.example.kexamplematerialmvvmfragments.ui.fragmentsettings.TypographyFragment
+import com.example.kexamplematerialmvvmfragments.ui.fragments_settings.ThemesFragment
+import com.example.kexamplematerialmvvmfragments.ui.fragments_settings.TypographyFragment
 
 import kotlinx.android.synthetic.main.main_fragment.*
 
@@ -23,6 +23,7 @@ class MainFragment : Fragment() {
     private lateinit var viewModel: MainViewModel
 
     // объявляем adapter-ы
+    lateinit var adapterSelections: RvAdapterSelections
     lateinit var adapterButtons: RvAdapterButtons
     lateinit var adapterEditView: RvAdapterEditView
     lateinit var adapterBottomSheet: RvAdapterBottomSheet
@@ -84,6 +85,12 @@ class MainFragment : Fragment() {
         adapterDemoRV = RvAdapterDemoRV(context!!)
         rv_demo_rv.adapter = adapterDemoRV
         rv_demo_rv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+
+        // Next adapter
+        adapterSelections = RvAdapterSelections(context!!)
+        rv_selections.adapter = adapterSelections
+        rv_selections.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+
 
 //        card_bottom_sheet.setOnClickListener {
 //            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, BottomSheetFragment())?.addToBackStack(null)?.commit()
@@ -155,6 +162,11 @@ class MainFragment : Fragment() {
         viewModel.liveDataDemoRV.observe(this, Observer {
             adapterDemoRV.adapterList = it
         })
+
+        viewModel.liveDataSelections.observe(this, Observer {
+            adapterSelections.adapterList = it
+        })
+
     }
 
 //    fun mClickItem (ttt: String) {

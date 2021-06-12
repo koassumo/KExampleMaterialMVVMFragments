@@ -23,8 +23,8 @@
             android:layout_alignParentTop="true"
             android:contentDescription="@string/content_description_media"
             android:scaleType="centerCrop"
+            android:src="@drawable/no_image"
             />
-        <!--        android:src="@drawable/viking7"-->
         <!--        app:srcCompat="@drawable/media"-->
 
         <TextView

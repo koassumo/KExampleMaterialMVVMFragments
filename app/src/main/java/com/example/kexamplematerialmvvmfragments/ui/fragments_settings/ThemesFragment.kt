@@ -1,4 +1,4 @@
-package com.example.kexamplematerialmvvmfragments.ui.fragmentsettings
+package com.example.kexamplematerialmvvmfragments.ui.fragments_settings
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle

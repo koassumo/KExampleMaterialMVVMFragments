@@ -18,6 +18,16 @@
 
         <com.google.android.material.textview.MaterialTextView
             style="@style/heading_text_style"
+            android:text="@string/selection_controls" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_selections"
+            style="@style/padding_start_top_end_normal_rv"
+            android:clipToPadding="false"
+            android:orientation="horizontal" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/heading_text_style"
             android:text="@string/recycle_view" />
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_demo_rv"

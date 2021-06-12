@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.selections.CheckboxesFragment">
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkbox_0"-->
+<!--        style="@style/margin_start_top_normal"-->
+<!--        android:paddingLeft="@dimen/step_end_normal"-->
+<!--        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"-->
+<!--        android:text="Additions"/>-->
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/checkbox_1"
+        style="@style/margin_start_2x_top_normal"
+        android:paddingLeft="@dimen/step_end_normal"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:text="Pickles"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/checkbox_2"
+        style="@style/margin_start_2x_top_normal"
+        android:paddingLeft="@dimen/step_end_normal"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:checked="true"
+
+        android:text="Tomato"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/checkbox_3"
+        style="@style/margin_start_2x_top_normal"
+        android:paddingLeft="@dimen/step_end_normal"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:text="Lettuce"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/checkbox_4"
+        style="@style/margin_start_2x_top_normal"
+        android:paddingLeft="@dimen/step_end_normal"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:text="Cheese"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

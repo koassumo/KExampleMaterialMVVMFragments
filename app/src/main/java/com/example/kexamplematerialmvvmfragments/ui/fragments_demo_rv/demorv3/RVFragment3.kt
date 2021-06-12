@@ -1,4 +1,4 @@
-package com.example.kexamplematerialmvvmfragments.ui.fragments.demorv3
+package com.example.kexamplematerialmvvmfragments.ui.fragments_demo_rv.demorv3
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
