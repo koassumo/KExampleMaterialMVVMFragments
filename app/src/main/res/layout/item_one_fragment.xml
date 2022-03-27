@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.demonavbarview.ItemOneFragment">
+    tools:context=".ui.fragments.navbar.pages.ItemOneFragment">
 
     <TextView
         android:layout_width="match_parent"

@@ -62,7 +62,7 @@
     <string name="bottom_app_bar">Bottom App Bar</string>
     <string name="chips">Chips</string>
     <string name="tabs">Tabs</string>
-    <string name="bottom_navigation">Bottom Navigation (Tabs)</string>
+    <string name="bottom_navigation">Bottom Navigation Bar</string>
     <string name="recycle_view">Recycle View</string>
     <string name="typography">Typography</string>
     <string name="themes">Themes</string>
@@ -75,4 +75,8 @@
     <string name="switch_1">Switch 1</string>
     <string name="switch_2">Switch 2</string>
     <string name="switch_3">Switch 3</string>
+    <string name="animation">Animation</string>
+    <string name="content_one">Content One</string>
+    <string name="content_two">Content Two</string>
+    <string name="content_three">Content Three</string>
 </resources>

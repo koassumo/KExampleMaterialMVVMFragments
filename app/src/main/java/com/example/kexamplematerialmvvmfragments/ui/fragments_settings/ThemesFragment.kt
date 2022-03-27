@@ -7,8 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.kexamplematerialmvvmfragments.R
-import com.example.kexamplematerialmvvmfragments.ui.main.MainActivity.Companion.themeFlag
-import com.example.kexamplematerialmvvmfragments.viewmodel.ThemesViewModel
+import com.example.kexamplematerialmvvmfragments.ui.MainActivity.Companion.themeFlag
 import kotlinx.android.synthetic.main.themes_fragment.*
 
 class ThemesFragment : Fragment() {

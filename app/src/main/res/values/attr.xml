@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="colorPrimaryLight" format="reference"/>
-    <attr name="colorBottomNavigationView" format="reference"/>
-    <attr name="colorBottomAppBar" format="reference"/>
+    <attr name="myColorPrimaryLight" format="reference"/>
+    <attr name="myColorBottomNavigationView" format="reference"/>
+    <attr name="myColorBottomAppBar" format="reference"/>
 </resources>

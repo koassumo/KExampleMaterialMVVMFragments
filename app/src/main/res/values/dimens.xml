@@ -16,12 +16,15 @@
     <dimen name="step_end_normal">12dp</dimen>
 
     <!--2x-->
+    <dimen name="step_top_2x">36dp</dimen>
     <dimen name="step_start_2x">24dp</dimen>
 
     <!--heading-->
     <dimen name="step_top_heading">36dp</dimen>
     <dimen name="step_start_heading">12dp</dimen>
     <!--others-->
+    <dimen name="step_negative">-10dp</dimen>
+    <dimen name="logo_width">100dp</dimen>
     <dimen name="step_zero">0dp</dimen>
     <dimen name="step_between_rv_items_small">6dp</dimen>
     <dimen name="step_between_rv_items_medium">8dp</dimen>

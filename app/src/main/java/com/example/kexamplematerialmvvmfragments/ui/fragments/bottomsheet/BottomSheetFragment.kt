@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.kexamplematerialmvvmfragments.R
-import com.example.kexamplematerialmvvmfragments.viewmodel.BottomSheetViewModel
 
 class BottomSheetFragment : Fragment() {
 

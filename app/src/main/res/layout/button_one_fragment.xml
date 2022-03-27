@@ -4,17 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.demobuttons.ButtonOneFragment"
+    tools:context=".ui.fragments.buttons.pages.ButtonOneFragment"
     >
 
     <LinearLayout
+        android:id="@+id/my_transition_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="400dp"
         android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.MaterialComponents.Button"
+            android:id="@+id/btn_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/step_start_normal"
@@ -23,6 +26,7 @@
 
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:id="@+id/btn_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/step_start_normal"
@@ -31,11 +35,17 @@
 
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:id="@+id/btn_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/step_start_normal"
             android:layout_marginTop="@dimen/step_top_normal"
             android:text="Text Button" />
+
+        <TextView
+            android:id="@+id/tv_1"
+            style="@style/heading_text_style"
+            android:text="laskfjlk"/>
 
     </LinearLayout>
 

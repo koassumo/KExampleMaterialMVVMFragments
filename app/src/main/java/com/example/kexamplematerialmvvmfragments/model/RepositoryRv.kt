@@ -41,10 +41,26 @@ object RepositoryRv {
         NoteRv("Demo Recycler View 4", "rv_demo_rv_4")
     )
 
+    private val listNoteRvTabs: List<NoteRv> = listOf(
+        NoteRv("Fixed Tabs", "rv_tabs_fixed"),
+        NoteRv("Scrollable Tabs", "rv_tabs_scrollable")
+    )
+
+
+    private val listNoteRvAnimation: List<NoteRv> = listOf(
+        NoteRv("Animation 1", "rv_animation_1"),
+        NoteRv("Animation 2", "rv_animation_2"),
+        NoteRv("Animation 3", "rv_animation_3"),
+        NoteRv("Animation 4", "rv_animation_4"),
+        NoteRv("Animation 5 Motion", "rv_animation_5")
+    )
+
     fun getListRvSelections () = listNoteRvSelections
     fun getListRvChips () = listNoteRvChips
     fun getListRvConstraintLayout () = listNoteRvConstraintLayout
     fun getListRvBottomNav () = listNoteBottomNav
     fun getListRvBottomAppBar () = listNoteRvBottomAppBar
     fun getListRvDemoRV () = listNoteRvDemoRV
+    fun getListRvTabs () = listNoteRvTabs
+    fun getListRvAnimation () = listNoteRvAnimation
 }
