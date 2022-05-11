@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.selections.RadioFragment">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:checkedButton="@+id/radio_button_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radio_1"
+            style="@style/margin_start_2x_top_normal"
+            android:paddingLeft="@dimen/step_start_2x"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:text="@string/label_luna"/>
+        <RadioButton
+            android:id="@+id/radio_2"
+            style="@style/margin_start_2x_top_normal"
+            android:paddingLeft="@dimen/step_start_2x"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:text="@string/label_mars"/>
+        <RadioButton
+            android:id="@+id/radio_3"
+            style="@style/margin_start_2x_top_normal"
+            android:paddingLeft="@dimen/step_start_2x"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:checked="true"
+            android:text="@string/label_saturn"/>
+        <RadioButton
+            android:id="@+id/radio_button_5"
+            style="@style/margin_start_2x_top_normal"
+            android:paddingLeft="@dimen/step_start_2x"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:enabled="true"
+            android:text="@string/label_sun"/>
+    </RadioGroup>
+
+</FrameLayout>

@@ -96,7 +96,10 @@
         app:endIconDrawable="@drawable/ic_wikipedia"
         app:endIconMode="clear_text"
         >
+
+<!--        ВНИМАНИЕ! Здесь используется стиль, созданный специально для одной вью -->
         <com.google.android.material.textfield.TextInputEditText
+            android:theme="@style/ThemeOverlay.MyApp.OneCard"
             android:id="@+id/input_edit_text3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

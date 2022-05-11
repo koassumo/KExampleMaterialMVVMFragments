@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:id="@+id/container_anim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--    ВАЖНО! android:adjustViewBounds="true"
+                : иначе сука-андройд добавляет дефолтные margin-ы выше и ниже
+                также для textview вроде - android:includeFontPadding="false"
+                такеж - android:scaleType="fitXY"
+                -->
+
+        <ImageView
+            android:id="@+id/s_igo_01"
+            style="@style/logo_image_style"
+            android:src="@drawable/s_igo_01" />
+
+        <ImageView
+            android:id="@+id/s_igo_02"
+            style="@style/logo_image_style"
+            android:src="@drawable/s_igo_02" />
+
+        <ImageView
+            android:id="@+id/s_igo_03"
+            style="@style/logo_image_style"
+            android:src="@drawable/s_igo_03" />
+
+        <ImageView
+            android:id="@+id/s_igo_04"
+            style="@style/logo_image_style"
+            android:src="@drawable/s_igo_04" />
+
+        <ImageView
+            android:id="@+id/s_igo_05"
+            style="@style/logo_image_style"
+            android:src="@drawable/s_igo_05" />
+
+        <ImageView
+            android:id="@+id/s_igo_06"
+            style="@style/logo_image_style"
+            android:src="@drawable/s_igo_06" />
+
+        <ImageView
+            android:id="@+id/s_igo_07"
+            style="@style/logo_image_style"
+            android:src="@drawable/s_igo_07" />
+
+        <ImageView
+            android:id="@+id/s_igo_08"
+            style="@style/logo_image_style"
+            android:src="@drawable/s_igo_08" />
+
+        <ImageView
+            android:id="@+id/s_igo_09"
+            style="@style/logo_image_style"
+            android:src="@drawable/s_igo_09" />
+
+        <ImageView
+            android:id="@+id/s_igo_10"
+            style="@style/logo_image_style"
+            android:src="@drawable/s_igo_10" />
+
+        <ImageView
+            android:id="@+id/s_igo_11"
+            style="@style/logo_image_style"
+            android:src="@drawable/s_igo_11" />
+
+        <ImageView
+            android:id="@+id/s_igo_12"
+            style="@style/logo_image_style"
+            android:src="@drawable/s_igo_12" />
+
+        <ImageView
+            android:id="@+id/s_igo_13"
+            style="@style/logo_image_style"
+            android:src="@drawable/s_igo_13" />
+
+        <ImageView
+            android:id="@+id/s_igo_14"
+            style="@style/logo_image_style"
+            android:src="@drawable/s_igo_14" />
+
+        <ImageView
+            android:id="@+id/s_igo_15"
+            style="@style/logo_image_style"
+            android:src="@drawable/s_igo_15" />
+
+        <ImageView
+            android:id="@+id/s_igo_16"
+            style="@style/logo_image_style"
+            android:src="@drawable/s_igo_16" />
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btn_111"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="PRESS" />-->
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_margin="15dp"
+        android:contentDescription="no description"
+        android:text="go"
+        android:textAlignment="center" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

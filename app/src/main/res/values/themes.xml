@@ -19,7 +19,7 @@
     <style name="IndigoAppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/indigo_600</item>
         //Light создан самостоятельно через аттрибуты
-        <item name="colorPrimaryLight">@color/indigo_100</item>
+        <item name="myColorPrimaryLight">@color/indigo_100</item>
         <item name="colorPrimaryDark">@color/indigo_900</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="strokeColor">?attr/colorPrimary</item>
@@ -28,9 +28,9 @@
         <item name="colorOnSecondary">@color/white</item>
 
         // свои собственные созданные атрибуты
-        <item name="colorBottomNavigationView">?attr/colorPrimary</item>
-        <item name="colorBottomAppBar">?attr/colorPrimaryDark</item>
-        <item name="android:windowBackground">?attr/colorPrimaryLight</item>
+        <item name="myColorBottomNavigationView">?attr/colorPrimary</item>
+        <item name="myColorBottomAppBar">?attr/colorPrimaryDark</item>
+        <item name="android:windowBackground">?attr/myColorPrimaryLight</item>
 
         <!--Установка шрифта-->
         <!--        <item name="fontFamily">@font/roboto_mono</item>-->
@@ -70,25 +70,24 @@
 
 
     <style name="GreenAppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/green_700</item>
-        //Light создан самостоятельно через аттрибуты
-        <item name="colorPrimaryLight">@color/green_50</item>
+        <item name="colorPrimary">@color/green_700</item>       //аттрибут (ключ) colorPrimary создан в appCompat
+        <item name="myColorPrimaryLight">@color/green_50</item> //аттрибут (ключ) myColorPrimaryLight создан самостоятельно через аттрибуты
         <item name="colorPrimaryDark">@color/green_900</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="strokeColor">?attr/colorPrimary</item>
+        <item name="strokeColor">?attr/colorPrimary</item>      //обращение к цвету не напрямую, а к цвету аттрибута (ключа) colorPrimary (созданному в appCompat)
 
         <item name="colorSecondary">@color/yellow_700</item>
         <item name="colorOnSecondary">@color/black</item>
 
-        <item name="colorBottomNavigationView">?attr/colorPrimary</item>
-        <item name="colorBottomAppBar">?attr/colorPrimaryDark</item>
-        <item name="android:windowBackground">?attr/colorPrimaryLight</item>
+        <item name="myColorBottomNavigationView">?attr/colorPrimary</item>
+        <item name="myColorBottomAppBar">?attr/colorPrimaryDark</item>
+        <item name="android:windowBackground">?attr/myColorPrimaryLight</item>
     </style>
 
     <style name="BrownAppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/brown_700</item>
         //Light создан самостоятельно через аттрибуты
-        <item name="colorPrimaryLight">@color/brown_200</item>
+        <item name="myColorPrimaryLight">@color/brown_200</item>
         <item name="colorPrimaryDark">@color/brown_900</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="strokeColor">?attr/colorPrimary</item>
@@ -99,18 +98,18 @@
         <item name="colorSurface">@color/pink_100</item>
         <item name="colorOnSurface">@color/black</item>
 
-        <item name="colorBottomNavigationView">@color/brown_400</item>
-        <item name="colorBottomAppBar">?attr/colorPrimary</item>
+        <item name="myColorBottomNavigationView">@color/brown_400</item>
+        <item name="myColorBottomAppBar">?attr/colorPrimary</item>
 
 <!--        <item name="android:colorBackground">@color/brown_50</item>-->
         <item name="android:navigationBarColor">@color/brown_900</item>
-        <item name="android:windowBackground">?attr/colorPrimaryLight</item>
+        <item name="android:windowBackground">?attr/myColorPrimaryLight</item>
     </style>
 
     <style name="YellowAppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/yellow_700</item>
         //Light создан самостоятельно через аттрибуты
-        <item name="colorPrimaryLight">@color/yellow_200</item>
+        <item name="myColorPrimaryLight">@color/yellow_200</item>
         <item name="colorPrimaryDark">@color/yellow_900</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="strokeColor">?attr/colorPrimaryDark</item>
@@ -118,12 +117,12 @@
         <item name="colorSecondary">@color/pink_800</item>
         <item name="colorOnSecondary">@color/white</item>
 
-        <item name="colorBottomNavigationView">?attr/colorPrimary</item>
-        <item name="colorBottomAppBar">?attr/colorPrimaryDark</item>
+        <item name="myColorBottomNavigationView">?attr/colorPrimary</item>
+        <item name="myColorBottomAppBar">?attr/colorPrimaryDark</item>
 
 <!--        <item name="android:colorBackground">@color/yellow_A100</item>-->
         <item name="android:navigationBarColor">?attr/colorPrimary</item>
-        <item name="android:windowBackground">?attr/colorPrimaryLight</item>
+        <item name="android:windowBackground">?attr/myColorPrimaryLight</item>
     </style>
 
     <style name="NoNoBackground" parent="android:Theme">

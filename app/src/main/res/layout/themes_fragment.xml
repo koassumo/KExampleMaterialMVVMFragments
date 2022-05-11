@@ -294,7 +294,7 @@
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
-                app:backgroundTint="?attr/colorBottomNavigationView">
+                app:backgroundTint="?attr/myColorBottomNavigationView">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -311,7 +311,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:backgroundTint="?attr/colorBottomAppBar"
+        app:backgroundTint="?attr/myColorBottomAppBar"
         app:fabAlignmentMode="center"
         app:hideOnScroll="true"
         app:layout_scrollFlags="scroll|enterAlways"
