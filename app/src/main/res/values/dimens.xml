@@ -22,6 +22,7 @@
     <!--heading-->
     <dimen name="step_top_heading">36dp</dimen>
     <dimen name="step_start_heading">12dp</dimen>
+
     <!--others-->
     <dimen name="step_negative">-10dp</dimen>
     <dimen name="logo_width">100dp</dimen>

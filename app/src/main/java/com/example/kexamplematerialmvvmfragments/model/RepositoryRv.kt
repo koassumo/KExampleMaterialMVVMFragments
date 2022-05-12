@@ -43,16 +43,16 @@ object RepositoryRv {
 
     private val listNoteRvTabs: List<NoteRv> = listOf(
         NoteRv("Fixed Tabs", "rv_tabs_fixed"),
-        NoteRv("Scrollable Tabs", "rv_tabs_scrollable")
+        // NoteRv("Scrollable Tabs", "rv_tabs_scrollable")
     )
 
 
     private val listNoteRvAnimation: List<NoteRv> = listOf(
-        NoteRv("Animation 1", "rv_animation_1"),
-        NoteRv("Animation 2", "rv_animation_2"),
-        NoteRv("Animation 3", "rv_animation_3"),
-        NoteRv("Animation 4", "rv_animation_4"),
-        NoteRv("Animation 5 Motion", "rv_animation_5")
+        NoteRv("Transition Set", "rv_anim_transition"),
+        NoteRv("Increase image", "rv_anim_increase"),
+        NoteRv("Arc motion", "rv_anim_arco"),
+        NoteRv("Randomly\nShuffles", "rv_anim_random"),
+        NoteRv("Motion View", "rv_anim_motion")
     )
 
     fun getListRvSelections () = listNoteRvSelections

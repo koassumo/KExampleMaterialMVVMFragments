@@ -30,10 +30,10 @@ class RvAdapterTabs (fragmentContext: Context) : RecyclerView.Adapter<RvAdapterT
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(adapterOnlyOneItemData: NoteRv) {
             itemView.tv_title.text = adapterOnlyOneItemData.title
-//            when (adapterOnlyOneItemData.imageName) {
-//                "rv_bottom_sheet_flex" -> itemView.iv_pic.setImageResource(R.drawable.rv_bottom_sheet_flex)
-//                "rv_bottom_sheet_persistent" -> itemView.iv_pic.setImageResource(R.drawable.rv_bottom_sheet_flex)
-//            }
+            when (adapterOnlyOneItemData.imageName) {
+                "rv_tabs_fixed" -> itemView.iv_pic.setImageResource(R.drawable.rv_tabs_fixed)
+                "rv_tabs_scrollable" -> itemView.iv_pic.setImageResource(R.drawable.rv_tabs_fixed)
+            }
             itemView.setOnClickListener {
                 val activity = adapterContext as AppCompatActivity
                 when (layoutPosition) {
