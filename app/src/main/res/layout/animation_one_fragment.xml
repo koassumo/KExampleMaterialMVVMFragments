@@ -14,7 +14,7 @@
         android:orientation="vertical">
 
         <!--    ВАЖНО! android:adjustViewBounds="true"
-                : иначе сука-андройд добавляет дефолтные margin-ы выше и ниже
+                : иначе андройд добавляет дефолтные margin-ы выше и ниже
                 также для textview вроде - android:includeFontPadding="false"
                 такеж - android:scaleType="fitXY"
                 -->

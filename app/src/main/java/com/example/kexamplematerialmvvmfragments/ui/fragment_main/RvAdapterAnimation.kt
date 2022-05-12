@@ -30,10 +30,14 @@ class RvAdapterAnimation (fragmentContext: Context) : RecyclerView.Adapter<RvAda
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(adapterOnlyOneItemData: NoteRv) {
             itemView.tv_title.text = adapterOnlyOneItemData.title
-//            when (adapterOnlyOneItemData.imageName) {
-//                "rv_bottom_sheet_flex" -> itemView.iv_pic.setImageResource(R.drawable.rv_bottom_sheet_flex)
-//                "rv_bottom_sheet_persistent" -> itemView.iv_pic.setImageResource(R.drawable.rv_bottom_sheet_flex)
-//            }
+            when (adapterOnlyOneItemData.imageName) {
+                "rv_anim_transition" -> itemView.iv_pic.setImageResource(R.drawable.rv_anim_transition)
+                "rv_anim_increase" -> itemView.iv_pic.setImageResource(R.drawable.rv_anim_increase)
+                "rv_anim_arco" -> itemView.iv_pic.setImageResource(R.drawable.rv_anim_arco)
+                "rv_anim_random" -> itemView.iv_pic.setImageResource(R.drawable.rv_anim_random)
+                "rv_anim_motion" -> itemView.iv_pic.setImageResource(R.drawable.rv_anim_motion)
+
+            }
             itemView.setOnClickListener {
 //                val ttt: String = it.tv_title.text as String
                 val activity = adapterContext as AppCompatActivity
