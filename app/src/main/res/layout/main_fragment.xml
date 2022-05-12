@@ -170,6 +170,10 @@
                 android:alpha="@dimen/alpha_img_large"/>
         </com.google.android.material.card.MaterialCardView>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/logo_width"/>
+
         <!--            <ImageView-->
         <!--                android:layout_width="match_parent"-->
         <!--                android:layout_height="match_parent"-->
