@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kexamplematerialmvvmfragments.R
 import com.example.kexamplematerialmvvmfragments.model.entity.NoteRvEditView
+import com.example.kexamplematerialmvvmfragments.ui.fragments.edittext.EditTextFiledFragment
 import com.example.kexamplematerialmvvmfragments.ui.fragments.edittext.EditTextFragment
 import kotlinx.android.synthetic.main.item_rv_main_common.view.*
 
@@ -41,7 +42,7 @@ class RvAdapterEditView (fragmentContext: Context) : RecyclerView.Adapter<RvAdap
                 val activity = adapterContext as AppCompatActivity
                 when (ttt) {
                     "Outlined\nBox" ->  activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, EditTextFragment())?.addToBackStack(null)?.commit()
-                    "Filled\nBox" ->  activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, EditTextFragment())?.addToBackStack(null)?.commit()
+                    "Filled\nBox" ->  activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, EditTextFiledFragment())?.addToBackStack(null)?.commit()
                 }
             }
         }
