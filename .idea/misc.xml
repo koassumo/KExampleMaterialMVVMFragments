@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_36.xml" value="0.328" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/+list_apod_fragment.xml" value="0.23157894736842105" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/_plus_list_apod_fragment.xml" value="0.23157894736842105" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/animation_five_fragment.xml" value="0.19444444444444445" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/animation_five_fragment_end.xml" value="0.11388888888888889" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/animation_four_fragment.xml" value="0.11388888888888889" />
@@ -31,6 +34,8 @@
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/nav_bar_fragment.xml" value="0.15902777777777777" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/r_v_fragment.xml" value="0.15902777777777777" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/text_field_fragment.xml" value="0.16180555555555556" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.2293159609120521" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/menu/menu_bottom_navigation_view.xml" value="0.2293159609120521" />
       </map>
     </option>
   </component>

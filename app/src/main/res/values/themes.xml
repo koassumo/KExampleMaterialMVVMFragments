@@ -72,7 +72,7 @@
     <style name="GreenAppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/green_700</item>       //аттрибут (ключ) colorPrimary создан в appCompat
         <item name="myColorPrimaryLight">@color/green_50</item> //аттрибут (ключ) myColorPrimaryLight создан самостоятельно через аттрибуты
-        <item name="colorPrimaryDark">@color/green_900</item>
+        <item name="colorPrimaryDark">@color/green_100</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="strokeColor">?attr/colorPrimary</item>      //обращение к цвету не напрямую, а к цвету аттрибута (ключа) colorPrimary (созданному в appCompat)
 
@@ -82,7 +82,24 @@
         <item name="myColorBottomNavigationView">?attr/colorPrimary</item>
         <item name="myColorBottomAppBar">?attr/colorPrimaryDark</item>
         <item name="android:windowBackground">?attr/myColorPrimaryLight</item>
+
+        <item name="textAppearanceHeadline6">@style/TextAppearance.Shrine.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.App.Subtitle1</item>
     </style>
+
+
+
+    <style name="TextAppearance.Shrine.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/rubik</item>
+        <item name="android:fontFamily">@font/rubik</item>
+    </style>
+
+    <style name="TextAppearance.App.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/rubik</item>
+        <item name="android:fontFamily">@font/rubik</item>
+    </style>
+
+
 
     <style name="BrownAppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/brown_700</item>

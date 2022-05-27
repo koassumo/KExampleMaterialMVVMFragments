@@ -35,7 +35,7 @@ class RVFragment2 : Fragment() {
         adapter = RVAdapter2 (context!!)
         rv_items.adapter = adapter
         rv_items.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        rv_items.addItemDecoration(DividerItemDecoration(context, LinearLayoutManager.VERTICAL))
+        //rv_items.addItemDecoration(DividerItemDecoration(context, LinearLayoutManager.VERTICAL))
         //fab_demo_rv.setOnClickListener { adapter.appendItem() }
     }
 
