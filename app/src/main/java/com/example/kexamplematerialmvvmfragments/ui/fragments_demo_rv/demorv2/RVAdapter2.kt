@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.item_rv_small_simple.view.*
 import kotlinx.android.synthetic.main.item_rv_small_simple.view.tv_description
 import kotlinx.android.synthetic.main.item_rv_small_simple.view.tv_title
 
-class RVAdapter2 (fragmentContext: Context) : RecyclerView.Adapter<RVAdapter2.BaseViewHolder>() {
+class RVAdapter2(fragmentContext: Context) : RecyclerView.Adapter<RVAdapter2.BaseViewHolder>() {
 
     companion object {
         private const val TYPE_SMALL = 1
@@ -42,10 +42,11 @@ class RVAdapter2 (fragmentContext: Context) : RecyclerView.Adapter<RVAdapter2.Ba
 //            itemView.tv_id.text = onlyOnePair.second.toString()
 //            itemView.tv_description.text = onlyOnePair.first.mDescription
 
-            itemView.iv_arrow_down.setOnClickListener { toggleText(layoutPosition)
-                Toast.makeText(aContext, "layoutPosition: $layoutPosition", Toast.LENGTH_SHORT).show()
+            itemView.iv_arrow_down.setOnClickListener {
+                toggleText(layoutPosition)
+                Toast.makeText(aContext, "layoutPosition: $layoutPosition", Toast.LENGTH_SHORT)
+                    .show()
             }
-
         }
     }
 
@@ -57,7 +58,7 @@ class RVAdapter2 (fragmentContext: Context) : RecyclerView.Adapter<RVAdapter2.Ba
             itemView.tv_title.text = onlyOnePair.first.mTitle
             itemView.tv_description.text = onlyOnePair.first.mDescription
 
-            itemView.iv_arrow_up.setOnClickListener { toggleText(layoutPosition)}
+            itemView.iv_arrow_up.setOnClickListener { toggleText(layoutPosition) }
         }
     }
 

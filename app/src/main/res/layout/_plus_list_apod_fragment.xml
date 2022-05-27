@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/appBarLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fitsSystemWindows="true"-->
+<!--        android:background="?attr/colorPrimaryVariant"-->
+<!--        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+
+<!--        <com.google.android.material.appbar.CollapsingToolbarLayout-->
+<!--            android:id="@+id/toolbar_layout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:fitsSystemWindows="true"-->
+<!--            app:contentScrim="?attr/colorPrimaryDark"-->
+<!--            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"-->
+<!--            app:title="@string/heading_title_pod"-->
+<!--            app:toolbarId="@+id/toolbar"-->
+<!--            app:collapsedTitleTextColor="?attr/colorOnPrimary"-->
+<!--            >-->
+<!--            &lt;!&ndash;  Если не указать  app:contentScrim="@color/indigo_900"-->
+<!--            то остается картинка при collapsed-->
+<!--            app:collapsedTitleTextColor="@color/orange_500"-->
+<!--            определяет цвет после анимации &ndash;&gt;-->
+
+<!--            <com.google.android.material.textview.MaterialTextView-->
+<!--                android:id="@+id/main.backdrop"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/step_xxx_large"-->
+<!--                android:fitsSystemWindows="true"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                app:layout_collapseMode="parallax"-->
+<!--                />-->
+
+<!--            &lt;!&ndash;    1. aPod&ndash;&gt;-->
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="?attr/actionBarSize"-->
+<!--                app:layout_collapseMode="pin"-->
+<!--                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"-->
+<!--                app:title="@string/heading_title_pod"/>-->
+
+<!--        </com.google.android.material.appbar.CollapsingToolbarLayout>-->
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rv_list_apod_vertical"-->
+<!--        app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+<!--        tools:showIn="@layout/list_apod_fragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:scrollbars="vertical" />-->
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
