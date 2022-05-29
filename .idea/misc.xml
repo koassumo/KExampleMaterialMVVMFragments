@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/drawable/button_image_ic_toggle_bg.xml" value="0.108" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_36.xml" value="0.328" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/+list_apod_fragment.xml" value="0.23157894736842105" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/_plus_list_apod_fragment.xml" value="0.23157894736842105" />
@@ -19,6 +20,7 @@
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/button_three_fragment.xml" value="0.11388888888888889" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/button_two_fragment.xml" value="0.11388888888888889" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/buttons_fragment.xml" value="0.11388888888888889" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/chips_fragment.xml" value="0.1840846994535519" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/constrained_layout_fragment.xml" value="0.2293159609120521" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/edit_text_filed_fragment.xml" value="0.23157894736842105" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/edit_text_fragment.xml" value="0.11388888888888889" />

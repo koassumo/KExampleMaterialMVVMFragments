@@ -176,4 +176,17 @@
     <!--    </style>-->
 
 
+
+    // Two styles for Toggle Image Button
+    <style name="Widget.Button.Toggle" parent="android:Widget">
+        <item name="android:background">@drawable/button_image_ic_toggle</item>
+        <item name="android:disabledAlpha">?android:attr/disabledAlpha</item>
+    </style>
+    <style name="toggleButton" parent="android:Theme.Black">
+        <item name="android:buttonStyleToggle">@style/Widget.Button.Toggle</item>
+        <item name="android:textOn"></item>
+        <item name="android:textOff"></item>
+    </style>
+
+
 </resources>
