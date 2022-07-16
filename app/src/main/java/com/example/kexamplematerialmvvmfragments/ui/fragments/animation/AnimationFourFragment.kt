@@ -72,7 +72,5 @@ class AnimationFourFragment : Fragment() {
             ViewCompat.setTransitionName(textView, title)
             layout.addView(textView)
         }
-
-
     }
 }

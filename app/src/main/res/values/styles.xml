@@ -176,6 +176,17 @@
     <!--    </style>-->
 
 
+    // To change collapsing appbar title
+    <style name="ExpandedAppBar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="CollapsedAppBar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+    </style>
 
     // Two styles for Toggle Image Button
     <style name="Widget.Button.Toggle" parent="android:Widget">
@@ -187,6 +198,9 @@
         <item name="android:textOn"></item>
         <item name="android:textOff"></item>
     </style>
+
+
+
 
 
 </resources>
