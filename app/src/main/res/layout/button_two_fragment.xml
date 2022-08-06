@@ -26,7 +26,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/step_start_normal"
             android:layout_marginTop="@dimen/step_top_normal"
-            app:singleSelection="true">
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            app:checkedButton="@+id/button1"
+            >
+            <!-- in group you can choose checked button
+               app:checkedButton="@+id/button1"
+               for required selection -
+               app:selectionRequired="true"-->
 
             <Button
                 android:id="@+id/button1"
@@ -41,7 +48,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Button 2"
-
                 />
 
             <Button
@@ -65,7 +71,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/step_start_normal"
-            android:layout_marginTop="@dimen/step_top_normal">
+            android:layout_marginTop="@dimen/step_top_normal"
+            app:checkedButton="@+id/buttonMulti1"
+            >
 
             <Button
                 android:id="@+id/buttonMulti1"
