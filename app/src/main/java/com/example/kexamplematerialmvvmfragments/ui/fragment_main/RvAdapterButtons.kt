@@ -11,6 +11,9 @@ import com.example.kexamplematerialmvvmfragments.model.entity.NoteRvButton
 
 import com.example.kexamplematerialmvvmfragments.ui.fragments.buttons.ButtonsFragment
 import com.example.kexamplematerialmvvmfragments.ui.fragments.bottomsheet.BottomSheetFragment
+import com.example.kexamplematerialmvvmfragments.ui.fragments.buttons.pages.ButtonOneFragment
+import com.example.kexamplematerialmvvmfragments.ui.fragments.buttons.pages.ButtonThreeFragment
+import com.example.kexamplematerialmvvmfragments.ui.fragments.buttons.pages.ButtonTwoFragment
 import kotlinx.android.synthetic.main.item_rv_main_common.view.*
 
 class RvAdapterButtons(fragmentContext: Context) : RecyclerView.Adapter<RvAdapterButtons.ViewHolder>() {
@@ -41,16 +44,14 @@ class RvAdapterButtons(fragmentContext: Context) : RecyclerView.Adapter<RvAdapte
                 "rv_button_gradient" -> itemView.iv_pic.setImageResource(R.drawable.rv_button_gradient)
             }
 
-            println("------------------------------------------------------------- before")
             itemView.setOnClickListener {
                 val ttt: String = it.tv_title.text as String
                 val activity = adapterContext as AppCompatActivity
                 //вариант val activity = it.context as AppCompatActivity
-                println("------------------------------------------------------------- after $ttt")
                 when (ttt) {
-                    "Text\nButton" -> activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, ButtonsFragment())?.addToBackStack(null)?.commit()
-                    "Toggle\nButton" -> activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, BottomSheetFragment())?.addToBackStack(null)?.commit()
-                    "Gradient\nButton" -> activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, BottomSheetFragment())?.addToBackStack(null)?.commit()
+                    "Single\nButton" -> activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, ButtonOneFragment())?.addToBackStack(null)?.commit()
+                    "Segmented\nButton" -> activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, ButtonTwoFragment())?.addToBackStack(null)?.commit()
+                    "Floating\nAction Button" -> activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, ButtonThreeFragment())?.addToBackStack(null)?.commit()
                     //Toast.makeText(adapterContext, "1", Toast.LENGTH_SHORT).show()
                 }
                 //Toast.makeText(mContext, "------------------------------------------------- $it.id", Toast.LENGTH_LONG).show()

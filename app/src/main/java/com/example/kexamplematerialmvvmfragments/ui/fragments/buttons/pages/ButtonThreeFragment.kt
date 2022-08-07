@@ -14,7 +14,7 @@ class ButtonThreeFragment : Fragment() {
         fun newInstance() = ButtonThreeFragment()
     }
 
-    private lateinit var viewModel: ButtonThreeViewModel
+    //private lateinit var viewModel: ButtonThreeViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,8 +25,7 @@ class ButtonThreeFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ButtonThreeViewModel::class.java)
-        // TODO: Use the ViewModel
+        //viewModel = ViewModelProvider(this).get(ButtonThreeViewModel::class.java)
     }
 
 }

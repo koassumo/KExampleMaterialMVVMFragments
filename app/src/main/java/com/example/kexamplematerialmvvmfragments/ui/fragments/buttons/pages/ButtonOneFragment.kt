@@ -17,7 +17,7 @@ class ButtonOneFragment : Fragment() {
         fun newInstance() = ButtonOneFragment()
     }
 
-    private lateinit var viewModel: ButtonOneViewModel
+    //private lateinit var viewModel: ButtonOneViewModel
     private var textIsVisible = true
 
     override fun onCreateView(
@@ -29,45 +29,44 @@ class ButtonOneFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ButtonOneViewModel::class.java)
-        // TODO: Use the ViewModel
+        //viewModel = ViewModelProvider(this).get(ButtonOneViewModel::class.java)
 
 
-        // анимация!
-        btn_1.setOnClickListener {
-
-            // (1) С сетом - все транзакции разными способами
-            // set определяет разные СПОСОБЫ транзакций для разных элементов
-            var mySet: TransitionSet = TransitionSet()
-                .addTransition(Slide(Gravity.END).addTarget(btn_2))
-                .addTransition(Slide(Gravity.END).addTarget(btn_3))
-                .addTransition(Slide(Gravity.BOTTOM).addTarget(tv_1))
-                .addTransition(Fade().addTarget(tv_1))
-                .addListener(object : TransitionListenerAdapter() {
-                    override fun onTransitionEnd(transition: Transition) { // реакция на завершение
-                        transition.removeListener(this)             // убирает себя (лисенера) !!!
-                        //activity?.onBackPressed()
-
-                    }
-
-                })
-            // Пуск после подготовки set
-            TransitionManager.beginDelayedTransition(my_transition_container, mySet)
-
-            // (2) Без сета - все транзакции только одним способом
-            // Пуск сразу
-//            TransitionManager.beginDelayedTransition(my_transition_container, Slide(Gravity.END))
-
-
-            // Целевое состояние (для любого способа пуска)
-            textIsVisible = !textIsVisible
-            btn_2.visibility = if (textIsVisible) View.VISIBLE else View.GONE
-            btn_3.visibility = if (textIsVisible) View.VISIBLE else View.GONE
-            tv_1.visibility = if (textIsVisible) View.VISIBLE else View.GONE
-            //it.visibility =  View.VISIBLE
-            activity?.onBackPressed()
-
-        }
+//        // анимация!
+//        btn_1.setOnClickListener {
+//
+//            // (1) С сетом - все транзакции разными способами
+//            // set определяет разные СПОСОБЫ транзакций для разных элементов
+//            var mySet: TransitionSet = TransitionSet()
+//                .addTransition(Slide(Gravity.END).addTarget(btn_2))
+//                .addTransition(Slide(Gravity.END).addTarget(btn_3))
+//                .addTransition(Slide(Gravity.BOTTOM).addTarget(tv_1))
+//                .addTransition(Fade().addTarget(tv_1))
+//                .addListener(object : TransitionListenerAdapter() {
+//                    override fun onTransitionEnd(transition: Transition) { // реакция на завершение
+//                        transition.removeListener(this)             // убирает себя (лисенера) !!!
+//                        //activity?.onBackPressed()
+//
+//                    }
+//
+//                })
+//            // Пуск после подготовки set
+//            TransitionManager.beginDelayedTransition(my_transition_container, mySet)
+//
+//            // (2) Без сета - все транзакции только одним способом
+//            // Пуск сразу
+////            TransitionManager.beginDelayedTransition(my_transition_container, Slide(Gravity.END))
+//
+//
+//            // Целевое состояние (для любого способа пуска)
+//            textIsVisible = !textIsVisible
+//            btn_2.visibility = if (textIsVisible) View.VISIBLE else View.GONE
+//            btn_3.visibility = if (textIsVisible) View.VISIBLE else View.GONE
+//            tv_1.visibility = if (textIsVisible) View.VISIBLE else View.GONE
+//            //it.visibility =  View.VISIBLE
+//            //activity?.onBackPressed()
+//
+//        }
     }
 
 }

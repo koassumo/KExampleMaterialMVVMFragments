@@ -14,7 +14,7 @@ class ButtonTwoFragment : Fragment() {
         fun newInstance() = ButtonTwoFragment()
     }
 
-    private lateinit var viewModel: ButtonTwoViewModel
+    // private lateinit var viewModel: ButtonTwoViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,8 +25,7 @@ class ButtonTwoFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ButtonTwoViewModel::class.java)
-        // TODO: Use the ViewModel
+        //viewModel = ViewModelProvider(this).get(ButtonTwoViewModel::class.java)
     }
 
 }
