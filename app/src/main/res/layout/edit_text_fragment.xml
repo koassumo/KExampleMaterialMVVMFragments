@@ -1,44 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="10dp">
 
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/heading_text_style"
+        android:text="@string/simple_field" />
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_layout"
+        android:id="@+id/input_layout_1"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/step_top_normal"
+        android:layout_marginStart="@dimen/step_start_normal"
+        android:layout_marginEnd="@dimen/step_end_normal"
 
-        app:boxStrokeWidth="2dp"
-        app:boxStrokeWidthFocused="4dp"
-        app:boxStrokeErrorColor="@color/purple_200"
+        app:boxStrokeWidth="@dimen/stroke_small"
+        app:boxStrokeWidthFocused="@dimen/stroke_large"
 
-        app:boxCornerRadiusBottomEnd="24dp"
+        android:hint="@string/hint_outlined_box"
+        app:helperText="@string/helper_text_1"
+        >
+<!--        app:boxCornerRadiusBottomEnd="24dp"-->
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_edit_text_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/heading_text_style"
+        android:text="Characters limited" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/step_top_normal"
+        android:layout_marginStart="@dimen/step_start_normal"
+        android:layout_marginEnd="@dimen/step_end_normal"
+
+        app:boxStrokeWidth="@dimen/stroke_small"
+        app:boxStrokeWidthFocused="@dimen/stroke_large"
+        app:boxStrokeErrorColor="@color/red_500"
 
         android:hint="@string/hint_outlined_box"
         app:placeholderText="@string/placeholder_text"
         app:helperText="@string/helper_text_1"
         app:counterEnabled="true"
         app:counterMaxLength="5"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        app:endIconMode="password_toggle"
         >
+
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/input_edit_text"
+            android:id="@+id/input_edit_text_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            />
 
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/heading_text_style"
+        android:text="@string/password_field" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/step_top_normal"
+        android:layout_marginStart="@dimen/step_start_normal"
+        android:layout_marginEnd="@dimen/step_end_normal"
+
+        app:boxStrokeWidth="@dimen/stroke_small"
+        app:boxStrokeWidthFocused="@dimen/stroke_large"
+
+        android:hint="@string/hint_outlined_box"
+        app:helperText="@string/helper_text_1"
+        app:endIconMode="password_toggle"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_edit_text_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:inputType="textPassword"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

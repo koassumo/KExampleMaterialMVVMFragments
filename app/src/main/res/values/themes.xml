@@ -44,6 +44,9 @@
         <item name="colorOnSecondary">@color/black</item>
 <!--        <item name="colorOnSurface">@color/black</item>-->
 
+<!--        <item name="colorSurface">@color/grey_00</item>-->
+        <item name="colorOnSurface">@color/black</item>
+
         <item name="myColorBottomNavigationView">?attr/colorPrimary</item>
         <item name="myColorBottomAppBar">?attr/colorPrimaryDark</item>
         <item name="android:windowBackground">?attr/myColorPrimaryLight</item>

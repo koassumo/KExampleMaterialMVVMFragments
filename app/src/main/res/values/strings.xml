@@ -4,15 +4,16 @@
     <string name="btn_edit_text">EditText</string>
     <string name="btn_bottom_sheet">BottomSheet</string>
 
-    <string name="hint_outlined_box">hint(Label) - OutlinedBox</string>
-    <string name="hint_filled_box">hint(Label) - FilledBox</string>
+    <string name="hint_outlined_box">OutlinedBox</string>
+    <string name="hint_filled_box">FilledBox</string>
     <string name="hint">hint(Label) -подсказка</string>
-    <string name="placeholder_text">placeholderText</string>
-    <string name="helper_text_1">helperText - вспомогательный: \n
-        в InputLayout - endIconMode=\"password_toggle\"\n
-        в EditText - inputType=\"textPassword\"\n
-        counterEnabled="true", counterMaxLength="20" - при превышении обод меняет цвет
-    </string>
+    <string name="placeholder_text">5 characters maximum</string>
+    <string name="helper_text_1">Supporting text</string>
+<!--    <string name="helper_text_1">helperText - вспомогательный: \n-->
+<!--        в InputLayout - endIconMode=\"password_toggle\"\n-->
+<!--        в EditText - inputType=\"textPassword\"\n-->
+<!--        counterEnabled="true", counterMaxLength="20" - при превышении обод меняет цвет-->
+<!--    </string>-->
     <string name="helper_text_2">"endIconCheckable=\"true\", endIconDrawable=\"@drawable/ic_wikipedia\"\nendIconMode=\"custom\" - иконка видна сразу"</string>
     <string name="helper_text_3">endIconMode=\"clear_text\" - т.е. иконку сразу не видно, возникает когда текст набираешь</string>
     <string name="favourite">favourite</string>
@@ -57,7 +58,7 @@
     <string name="content_description_media">no description media</string>
     <string name="title">no title</string>
     <string name="buttons">Buttons</string>
-    <string name="edit_text">Text Fields (Edit Text)</string>
+    <string name="edit_text">Text Fields</string>
     <string name="bottom_sheet">Bottom Sheet</string>
     <string name="bottom_app_bar">Bottom App Bar</string>
     <string name="chips">Chips</string>
@@ -94,4 +95,8 @@
     <string name="floating_action_button">Floating Action Button</string>
     <string name="floating_ext_action_button">Floating Extended Action Button</string>
     <string name="fab_add_item">Add item</string>
+    <string name="password_field">Password field</string>
+    <string name="simple_field">Simple outlined field</string>
+    <string name="simple_filled_field">Simple filled field</string>
+    <string name="limited_characters">Limited characters</string>
 </resources>
