@@ -5,22 +5,22 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-    <com.google.android.material.appbar.CollapsingToolbarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_scrollFlags="scroll|enterAlways|snap"
-        >
+<!--    <com.google.android.material.appbar.CollapsingToolbarLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_scrollFlags="scroll|enterAlways|snap"-->
+<!--        >-->
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:title="@string/top_app_bar"
-            app:titleTextColor="@color/primaryTextColor"
+<!--        <com.google.android.material.appbar.MaterialToolbar-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            app:title="@string/top_app_bar"-->
+<!--            app:titleTextColor="@color/primaryTextColor"-->
 
-            >
+<!--            >-->
 
-        </com.google.android.material.appbar.MaterialToolbar>
-    </com.google.android.material.appbar.CollapsingToolbarLayout>
+<!--        </com.google.android.material.appbar.MaterialToolbar>-->
+<!--    </com.google.android.material.appbar.CollapsingToolbarLayout>-->
 
     <ScrollView
         android:layout_width="match_parent"
@@ -30,63 +30,76 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:clipToPadding="false"
             android:orientation="vertical"
             android:layout_marginTop="0dp"
             android:paddingBottom="16dp">
 
-
             <com.google.android.material.textview.MaterialTextView
-                style="@style/TextAppearance.MaterialComponents.Headline5"
+                style="@style/heading_text_style"
+                android:text="@string/please_select_the_theme" />
+
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleButtonSingle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/step_start_normal"
                 android:layout_marginTop="@dimen/step_top_normal"
-                android:text="Выбери тему" />
+                app:singleSelection="true"
+                app:selectionRequired="true"
+                app:checkedButton="@+id/button1"
+                >
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <com.google.android.material.button.MaterialButton
+                <Button
                     android:id="@+id/btnIndigo"
-                    style="@style/btnIndigo"
-                    android:layout_weight="25"
-                    android:text="Indigo" />
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    app:cornerRadius="@dimen/button_rounded_corner"
+                    android:text="@string/cyan"
+                    />
 
-                <com.google.android.material.button.MaterialButton
+                <Button
                     android:id="@+id/btnGreen"
-                    style="@style/btnGreen"
-                    android:layout_weight="25"
-                    android:text="G" />
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    app:cornerRadius="@dimen/button_rounded_corner"
+                    android:text="@string/green"
+                    />
 
-                <com.google.android.material.button.MaterialButton
+                <Button
                     android:id="@+id/btnBrown"
-                    style="@style/btnBrown"
-                    android:layout_weight="25"
-                    android:text="Brown" />
-
-                <com.google.android.material.button.MaterialButton
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    app:cornerRadius="@dimen/button_rounded_corner"
+                    android:text="@string/brown" />
+                <Button
                     android:id="@+id/btnYellow"
-                    style="@style/btnYellow"
-                    android:layout_weight="25"
-                    android:text="Yellow" />
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    app:cornerRadius="@dimen/button_rounded_corner"
+                    android:text="@string/yellow" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
 
-            </LinearLayout>
 
             <com.google.android.material.textview.MaterialTextView
-                style="@style/TextAppearance.MaterialComponents.Headline5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/step_top_normal"
-                android:text="Примеры компонентов в теме" />
+                style="@style/heading_text_style"
+                android:text="@string/components_examples" />
 
             <GridLayout
                 style="@style/margin_left"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:columnCount="3"
+                android:columnCount="2"
                 android:useDefaultMargins="true"
 
                 >

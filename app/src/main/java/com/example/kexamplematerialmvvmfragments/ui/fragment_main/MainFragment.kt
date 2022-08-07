@@ -1,23 +1,29 @@
 package com.example.kexamplematerialmvvmfragments.ui.fragment_main
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kexamplematerialmvvmfragments.R
 import com.example.kexamplematerialmvvmfragments.ui.fragments_settings.ThemesFragment
 import com.example.kexamplematerialmvvmfragments.ui.fragments_settings.TypographyFragment
 import kotlinx.android.synthetic.main.main_fragment.*
 
+
 class MainFragment : Fragment() {
 
     companion object {
         fun newInstance() = MainFragment()
     }
+
+    //var lastFirstVisiblePosition by lazy
+    var state: Parcelable? = null
+
     // (1) объявляем mViewModel
     private lateinit var viewModel: MainViewModel
 
@@ -43,7 +49,26 @@ class MainFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         // (2) наполнение mViewModel
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        // TODO: Use the ViewModel
+
+
+//
+//        val scroller = findViewById(R.id.myScroll) as NestedScrollView?
+//
+//        scroller?.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+//            if (scrollY > oldScrollY) {
+//                Log.i(TAG, "Scroll DOWN")
+//            }
+//            if (scrollY < oldScrollY) {
+//                Log.i(TAG, "Scroll UP")
+//            }
+//            if (scrollY == 0) {
+//                Log.i(TAG, "TOP SCROLL")
+//            }
+//            if (scrollY == v.measuredHeight - v.getChildAt(0).measuredHeight) {
+//                Log.i(TAG, "BOTTOM SCROLL")
+//            }
+//        })
+
 
         // First adapter
         // подтягиваем rv, кладем layout на rv
@@ -186,6 +211,25 @@ class MainFragment : Fragment() {
         })
 
     }
+
+
+//    override fun onPause() {
+//        state = main_nsv.state
+//        super.onPause()
+//    }
+
+
+//    override fun onPause() {
+//        super.onPause()
+//        lastFirstVisiblePosition = (main_nsv as LinearLayoutManager).findFirstCompletelyVisibleItemPosition()
+//    }
+//
+//    override fun onResume() {
+//        super.onResume()
+//        (main_nsv as LinearLayoutManager).scrollToPositionWithOffset(lastFirstVisiblePosition,0)
+//    }
+
+
 
 //    fun mClickItem (ttt: String) {
 //        when (ttt) {

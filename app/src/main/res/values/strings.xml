@@ -111,6 +111,14 @@
     <string name="_08_48">08:48</string>
     <string name="_9_5">9.5</string>
     <string name="information_1_data">information 1: data\ninformation 2: data\ninformation 3: data\ninformation 4: data\ninformation 5: data</string>
+    <string name="cyan">Cyan</string>
+    <string name="green">Green</string>
+    <string name="brown">Brown</string>
+    <string name="yellow">Yellow</string>
+    <string name="please_select_the_theme">Please select the theme</string>
+    <string name="components_examples">Components examples</string>
+    <string name="screen_1">Screen 1</string>
+    <string name="screen_2">Screen 2</string>
 
 
 </resources>
