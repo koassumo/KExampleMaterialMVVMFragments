@@ -22,10 +22,10 @@ class RVViewModel : ViewModel() {
         //        var listData: MutableList<NoteDemoRV> = RepositoryDemoRV.getListNoteDemoRV().toMutableList()
         // добавляем headers в полученный список
         var listData: MutableList<NoteDemoRV> = RepositoryDemoRV.getListNoteDemoRV().toMutableList()
-        listData.add(0, NoteDemoRV(null, "This Is Header", null))
+        listData.add(0, NoteDemoRV(null, "This Is Top Header", null))
         var i = 4
         while (listData.size > i) {
-            listData.add(i, NoteDemoRV(null, "This Is Next Three Header", null))
+            listData.add(i, NoteDemoRV(null, "This Is Inner Header", null))
             i +=4
         }
         listData.add(NoteDemoRV(null, "This Is Footer", null))

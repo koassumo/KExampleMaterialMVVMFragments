@@ -50,10 +50,10 @@ class RvAdapterDemoRV (fragmentContext: Context) : RecyclerView.Adapter<RvAdapte
                     "Demo Recycler View 1" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
                         R.id.container, RVFragment()
                     )?.addToBackStack(null)?.commit()
-                    "Demo Recycler View 2" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
+                    "Simple Recycler View" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
                         R.id.container, RVFragment2()
                     )?.addToBackStack(null)?.commit()
-                    "Demo Recycler View 3" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
+                    "Modified Recycler View" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
                         R.id.container, RVFragment3()
                     )?.addToBackStack(null)?.commit()
                     "Demo Recycler View 4" -> activity?.supportFragmentManager?.beginTransaction()?.replace(

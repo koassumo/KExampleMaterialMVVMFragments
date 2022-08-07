@@ -35,10 +35,10 @@ object RepositoryRv {
     )
 
     private val listNoteRvDemoRV: List<NoteRv> = listOf(
-        NoteRv("Demo Recycler View 1", "rv_demo_rv_1"),
-        NoteRv("Demo Recycler View 2", "rv_demo_rv_2"),
-        NoteRv("Demo Recycler View 3", "rv_demo_rv_3"),
-        NoteRv("Demo Recycler View 4", "rv_demo_rv_4")
+        //NoteRv("Demo Recycler View 1", "rv_demo_rv_1"),
+        NoteRv("Simple Recycler View", "rv_demo_rv_2"),
+        NoteRv("Modified Recycler View", "rv_demo_rv_3"),
+        //NoteRv("Demo Recycler View 4", "rv_demo_rv_4")
     )
 
     private val listNoteRvTabs: List<NoteRv> = listOf(

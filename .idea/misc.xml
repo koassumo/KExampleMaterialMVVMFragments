@@ -27,8 +27,11 @@
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/edit_text_filed_fragment.xml" value="0.2" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/edit_text_fragment.xml" value="0.17" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_one_fragment.xml" value="0.15902777777777777" />
-        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_rv_header.xml" value="0.16180555555555556" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_rv_header.xml" value="0.25" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_rv_main_common.xml" value="0.5" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_rv_medium.xml" value="0.2" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_rv_medium_simple.xml" value="0.16319444444444445" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_rv_small.xml" value="0.33" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_rv_small_simple.xml" value="0.15902777777777777" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_rv_typography.xml" value="0.15902777777777777" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_three_fragment.xml" value="0.15902777777777777" />
@@ -37,6 +40,7 @@
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/main_fragment.xml" value="0.15902777777777777" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/nav_bar_fragment.xml" value="0.15902777777777777" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/r_v_fragment.xml" value="0.15902777777777777" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/r_v_fragment_3.xml" value="0.18" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/radio_fragment.xml" value="0.16458333333333333" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/switches_fragment.xml" value="0.16458333333333333" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/text_field_fragment.xml" value="0.16180555555555556" />

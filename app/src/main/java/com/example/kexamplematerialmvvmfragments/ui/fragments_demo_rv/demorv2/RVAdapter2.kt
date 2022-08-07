@@ -113,12 +113,6 @@ class RVAdapter2(fragmentContext: Context) : RecyclerView.Adapter<RVAdapter2.Bas
         }
     }
 
-//    fun appendItem() {
-//        aListPair.add(1, generateItem())
-//        notifyItemInserted(1)
-//        // notifyDataSetChanged()
-//    }
-
     private fun generateItem(): NoteDemoRV = NoteDemoRV("333", "333", "333")
 
 }
