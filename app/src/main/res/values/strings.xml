@@ -119,6 +119,13 @@
     <string name="components_examples">Components examples</string>
     <string name="screen_1">Screen 1</string>
     <string name="screen_2">Screen 2</string>
-
+    <string name="credits">Credits</string>
+    <string name="credits_text">
+        Version 1.1\n
+        Copyright 2022\n
+        Created by Igor Semenov\n
+        Icon Design:\n
+        <a href="https://www.flaticon.com/free-icons/letter-m" title="letter m icons">Letter m icons created by Laisa Islam Ani - Flaticon</a>
+    </string>
 
 </resources>

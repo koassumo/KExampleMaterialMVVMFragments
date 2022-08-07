@@ -57,6 +57,11 @@
         <item name="shapeAppearanceMediumComponent">@style/AppShapeAppearance.MediumComponent</item>
         <item name="shapeAppearanceLargeComponent">@style/AppShapeAppearance.LargeComponent</item>
 
+        <!--Установка шрифта-->
+                <item name="fontFamily">@font/roboto_light</item>
+                <item name="android:fontFamily">@font/roboto_light</item>
+
+
     </style>
 
     <!-- Theme 1   -->
@@ -78,8 +83,8 @@
 
         <item name="android:navigationBarColor">?attr/colorPrimaryDark</item>
 
-        <item name="textAppearanceHeadline6">@style/TextAppearance.Shrine.Headline6</item>
-        <item name="textAppearanceSubtitle1">@style/TextAppearance.App.Subtitle1</item>
+<!--        <item name="textAppearanceHeadline6">@style/TextAppearance.Shrine.Headline6</item>-->
+<!--        <item name="textAppearanceSubtitle1">@style/TextAppearance.App.Subtitle1</item>-->
     </style>
 
     <!-- Theme 2   -->
@@ -122,8 +127,8 @@
         <item name="android:navigationBarColor">?attr/colorPrimaryDark</item>
         <item name="android:windowBackground">?attr/myColorPrimaryLight</item>
 
-        <item name="textAppearanceHeadline6">@style/TextAppearance.Shrine.Headline6</item>
-        <item name="textAppearanceSubtitle1">@style/TextAppearance.App.Subtitle1</item>
+<!--        <item name="textAppearanceHeadline6">@style/TextAppearance.Shrine.Headline6</item>-->
+<!--        <item name="textAppearanceSubtitle1">@style/TextAppearance.App.Subtitle1</item>-->
     </style>
 
 
