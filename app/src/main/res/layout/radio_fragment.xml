@@ -16,6 +16,7 @@
             style="@style/margin_start_2x_top_normal"
             android:paddingLeft="@dimen/step_start_2x"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:checked="true"
             android:text="@string/label_luna"/>
         <RadioButton
             android:id="@+id/radio_2"
@@ -28,7 +29,6 @@
             style="@style/margin_start_2x_top_normal"
             android:paddingLeft="@dimen/step_start_2x"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
-            android:checked="true"
             android:text="@string/label_saturn"/>
         <RadioButton
             android:id="@+id/radio_button_5"

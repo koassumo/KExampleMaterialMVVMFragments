@@ -99,4 +99,8 @@
     <string name="simple_field">Simple outlined field</string>
     <string name="simple_filled_field">Simple filled field</string>
     <string name="limited_characters">Limited characters</string>
+    <string name="pickles">Pickles</string>
+    <string name="tomato">Tomato</string>
+    <string name="lettuce">Lettuce</string>
+    <string name="cheese">Cheese</string>
 </resources>
