@@ -26,7 +26,7 @@ class MainFragment : Fragment() {
     lateinit var adapterButtons: RvAdapterButtons
     lateinit var adapterEditView: RvAdapterEditView
     lateinit var adapterBottomSheet: RvAdapterBottomSheet
-    lateinit var adapterChips: RvAdapterChips
+    //lateinit var adapterChips: RvAdapterChips
     lateinit var adapterConstraintLayout: RvAdapterConstraintLayout
     lateinit var adapterBottomNav: RvAdapterBottomNav
     lateinit var adapterBottomAppBar: RvAdapterBottomAppBar
@@ -63,9 +63,9 @@ class MainFragment : Fragment() {
         rv_bottom_sheet.adapter = adapterBottomSheet
 
         // Next adapter
-        adapterChips = RvAdapterChips(context!!)
-        rv_chips.adapter = adapterChips
-        rv_chips.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        //adapterChips = RvAdapterChips(context!!)
+        //rv_chips.adapter = adapterChips
+        //rv_chips.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
         // Next adapter
         adapterConstraintLayout = RvAdapterConstraintLayout(context!!)
@@ -153,9 +153,9 @@ class MainFragment : Fragment() {
             adapterBottomSheet.adapterList = it       // вызов set в адаптере
         })
 
-        viewModel.liveDataChips.observe(this, Observer {
-            adapterChips.adapterList = it       // вызов set в адаптере
-        })
+//        viewModel.liveDataChips.observe(this, Observer {
+//            adapterChips.adapterList = it       // вызов set в адаптере
+//        })
 
         viewModel.liveDataConstraintLayout.observe(this, Observer {
             adapterConstraintLayout.adapterList = it       // вызов set в адаптере

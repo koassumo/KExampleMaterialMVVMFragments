@@ -75,15 +75,15 @@
             android:orientation="horizontal" />
 
 
-        <com.google.android.material.textview.MaterialTextView
-            style="@style/heading_text_style"
-            android:text="@string/chips" />
-        <!--  RV Не забываем !!!!! android:clipToPadding="false"-->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_chips"
-            style="@style/padding_start_top_end_normal_rv"
-            android:clipToPadding="false"
-            android:orientation="horizontal" />
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            style="@style/heading_text_style"-->
+<!--            android:text="@string/chips" />-->
+<!--        &lt;!&ndash;  RV Не забываем !!!!! android:clipToPadding="false"&ndash;&gt;-->
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rv_chips"-->
+<!--            style="@style/padding_start_top_end_normal_rv"-->
+<!--            android:clipToPadding="false"-->
+<!--            android:orientation="horizontal" />-->
 
         <com.google.android.material.textview.MaterialTextView
             style="@style/heading_text_style"
