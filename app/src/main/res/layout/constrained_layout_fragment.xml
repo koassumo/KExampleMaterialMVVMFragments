@@ -1,120 +1,370 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_const_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment_main.MainFragment">
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/step_zero"
+    app:cardElevation="@dimen/step_zero">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFragmentButtons"
-        android:layout_width="wrap_content"
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/heading_text_style"
+        android:text="Constraint Layout Table" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_buttons"
-        app:layout_constraintBottom_toTopOf="@+id/btnFragmentEditText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        android:layout_marginTop="@dimen/step_normal"
+        android:layout_marginStart="@dimen/step_normal"
+        android:layout_marginEnd="@dimen/step_normal"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="@dimen/step_xx_small">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFragmentEditText"
-        android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title_date_solar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey_400"
+                android:paddingStart="@dimen/step_normal"
+                android:paddingTop="@dimen/step_small"
+                android:paddingBottom="@dimen/step_small"
+                android:text="@string/_08_08_2022"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_large"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_edit_text"
-        app:layout_constraintBottom_toTopOf="@+id/btnFragmentBottomSheet"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFragmentButtons"
-        app:layout_constraintVertical_chainStyle="spread" />
+        android:layout_marginTop="@dimen/step_zero"
+        android:layout_marginStart="@dimen/step_normal"
+        android:layout_marginEnd="@dimen/step_normal"
+        app:cardCornerRadius="@dimen/step_zero"
+        app:cardElevation="@dimen/step_xx_small">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_date_solar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey_300"
+                android:paddingTop="@dimen/step_small"
+                android:paddingEnd="@dimen/step_small"
+                android:paddingBottom="@dimen/step_small"
+                android:text="@string/_08_48"
+                android:textAlignment="textEnd"
+                app:layout_constraintBottom_toTopOf="@id/guide_horizontal"
+                app:layout_constraintEnd_toStartOf="@id/guide_line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_date_solar" />
+            <!--        android:windowBackground="@color/blue_grey_200"-->
 
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFragmentBottomSheet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_bottom_sheet"
-        app:layout_constraintBottom_toTopOf="@+id/btnFragmentBottomAppBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFragmentEditText"
-        app:layout_constraintVertical_chainStyle="spread" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@id/view_scale_1of5"
+                app:layout_constraintGuide_percent="0.26"
+                app:layout_constraintStart_toEndOf="@id/tv_date_solar"
+                app:layout_constraintTop_toTopOf="parent"
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFragmentBottomAppBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_bottom_app_bar"
-        app:layout_constraintBottom_toTopOf="@+id/btnFragmentChips"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFragmentBottomSheet"
-        app:layout_constraintVertical_chainStyle="spread" />
+                />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFragmentChips"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_chips"
-        app:layout_constraintBottom_toTopOf="@+id/btnFragmentNavBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFragmentBottomAppBar"
-        app:layout_constraintVertical_chainStyle="spread" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_scale_1of5"
+                style="@style/view_scale_item"
+                android:layout_marginStart="@dimen/step_small"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/light_green_800"
+                app:cardCornerRadius="@dimen/step_xx_small"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/guide_horizontal"
+                app:layout_constraintStart_toEndOf="@id/tv_date_solar"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFragmentNavBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_nav_bar"
-        app:layout_constraintBottom_toBottomOf="@id/btnFragmentRV"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFragmentChips"
-        app:layout_constraintVertical_chainStyle="spread" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_scale_2of5"
+                style="@style/view_scale_item"
+                android:layout_marginStart="@dimen/step_xx_small"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/light_green_800"
+                app:cardCornerRadius="@dimen/step_xx_small"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/guide_horizontal"
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFragmentRV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_rv"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFragmentNavBar"
-        app:layout_constraintVertical_chainStyle="spread" />
+                app:layout_constraintStart_toEndOf="@id/view_scale_1of5"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="end"
-        app:constraint_referenced_ids="btnFragmentNavBar, btnFragmentNavBar" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_scale_3of5"
+                style="@style/view_scale_item"
+                android:layout_marginStart="@dimen/step_xx_small"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/yellow_800"
+                app:cardCornerRadius="@dimen/step_xx_small"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/guide_horizontal"
+                app:layout_constraintStart_toEndOf="@id/view_scale_2of5"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFragmentThemes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_themes"
-        app:layout_constraintBottom_toTopOf="@id/btnFragmentTypography"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/barrier7"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_scale_4of5"
+                style="@style/view_scale_item"
+                android:layout_marginStart="@dimen/step_xx_small"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/yellow_800"
+                app:cardCornerRadius="@dimen/step_xx_small"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/guide_horizontal"
+                app:layout_constraintCircleRadius="@dimen/step_normal"
+                app:layout_constraintStart_toEndOf="@id/view_scale_3of5"
+                app:layout_constraintTop_toTopOf="parent" />
 
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFragmentTypography"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_typography"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/barrier7"
-        app:layout_constraintTop_toBottomOf="@id/btnFragmentThemes"
-        app:layout_constraintVertical_chainStyle="spread" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_scale_5of5"
+                style="@style/view_scale_item"
+                android:layout_marginStart="@dimen/step_xx_small"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/red_900"
+                app:cardCornerRadius="@dimen/step_xx_small"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/guide_horizontal"
+                app:layout_constraintCircleRadius="@dimen/step_normal"
+                app:layout_constraintStart_toEndOf="@id/view_scale_4of5"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_line1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@id/tv_solar_flare_class"
+                app:layout_constraintGuide_percent="0.7"
+                app:layout_constraintStart_toEndOf="@id/view_scale_4of5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_solar_flare_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/step_normal"
+                android:text="@string/_9_5"
+                android:textAlignment="textStart"
+                app:flow_horizontalAlign="start"
+                app:layout_constraintBottom_toBottomOf="@id/guide_horizontal"
+                app:layout_constraintEnd_toStartOf="@id/guide_line2"
+                app:layout_constraintStart_toEndOf="@id/guide_line1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_line2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintGuide_percent="0.84"
+                app:layout_constraintStart_toEndOf="@id/tv_solar_flare_class"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_info_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@id/guide_horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guide_line2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_arrow_upward_24" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_info_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/guide_horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guide_line2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_button_grid_multi_24" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/step_zero"
+                android:orientation="horizontal"
+                android:padding="@dimen/step_zero"
+                app:layout_constraintTop_toBottomOf="@id/tv_date_solar" />
+
+            <TextView
+                android:id="@+id/tv_date_solar_detailed"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey_300"
+                android:paddingTop="@dimen/step_small"
+                android:paddingEnd="@dimen/step_small"
+                android:paddingBottom="@dimen/step_small"
+                android:text="@string/holder_some_n"
+                android:textAlignment="textEnd"
+                app:layout_constraintEnd_toStartOf="@id/guide_line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/guide_horizontal" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_solar_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/step_normal"
+                android:textAlignment="textStart"
+                android:text="@string/information_1_data"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guide_line"
+                app:layout_constraintTop_toBottomOf="@id/guide_horizontal" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout><!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:id="@+id/main_const_layout"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    tools:context=".ui.fragment_main.MainFragment">-->
+
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        android:id="@+id/btnFragmentButtons"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/btn_buttons"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/btnFragmentEditText"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_chainStyle="packed" />-->
+
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        android:id="@+id/btnFragmentEditText"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/btn_edit_text"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/btnFragmentBottomSheet"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/btnFragmentButtons"-->
+    <!--        app:layout_constraintVertical_chainStyle="spread" />-->
+
+
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        android:id="@+id/btnFragmentBottomSheet"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/btn_bottom_sheet"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/btnFragmentBottomAppBar"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/btnFragmentEditText"-->
+    <!--        app:layout_constraintVertical_chainStyle="spread" />-->
+
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        android:id="@+id/btnFragmentBottomAppBar"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/btn_bottom_app_bar"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/btnFragmentChips"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/btnFragmentBottomSheet"-->
+    <!--        app:layout_constraintVertical_chainStyle="spread" />-->
+
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        android:id="@+id/btnFragmentChips"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/btn_chips"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/btnFragmentNavBar"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/btnFragmentBottomAppBar"-->
+    <!--        app:layout_constraintVertical_chainStyle="spread" />-->
+
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        android:id="@+id/btnFragmentNavBar"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/btn_nav_bar"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@id/btnFragmentRV"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/btnFragmentChips"-->
+    <!--        app:layout_constraintVertical_chainStyle="spread" />-->
+
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        android:id="@+id/btnFragmentRV"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/btn_rv"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/btnFragmentNavBar"-->
+    <!--        app:layout_constraintVertical_chainStyle="spread" />-->
+
+    <!--    <androidx.constraintlayout.widget.Barrier-->
+    <!--        android:id="@+id/barrier7"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:barrierDirection="end"-->
+    <!--        app:constraint_referenced_ids="btnFragmentNavBar, btnFragmentNavBar" />-->
+
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        android:id="@+id/btnFragmentThemes"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/btn_themes"-->
+    <!--        app:layout_constraintBottom_toTopOf="@id/btnFragmentTypography"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/barrier7"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_chainStyle="packed" />-->
+
+
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        android:id="@+id/btnFragmentTypography"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/btn_typography"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/barrier7"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/btnFragmentThemes"-->
+    <!--        app:layout_constraintVertical_chainStyle="spread" />-->
+
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->

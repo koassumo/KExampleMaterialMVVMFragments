@@ -42,15 +42,15 @@ class RvAdapterConstraintLayout (fragmentContext: Context) : RecyclerView.Adapte
                 val activity = adapterContext as AppCompatActivity
                 //вариант val activity = it.context as AppCompatActivity
                 when (ttt) {
-                    "ConstraintLayout1" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
+                    "ConstraintLayout" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
                         R.id.container, ConstrainedLayoutFragment()
                     )?.addToBackStack(null)?.commit()
-                    "ConstraintLayout2" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
-                        R.id.container, ConstrainedLayoutFragment()
-                    )?.addToBackStack(null)?.commit()
-                    "ConstraintLayout3" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
-                        R.id.container, ConstrainedLayoutFragment()
-                    )?.addToBackStack(null)?.commit()
+//                    "ConstraintLayout2" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
+//                        R.id.container, ConstrainedLayoutFragment()
+//                    )?.addToBackStack(null)?.commit()
+//                    "ConstraintLayout3" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
+//                        R.id.container, ConstrainedLayoutFragment()
+//                    )?.addToBackStack(null)?.commit()
                 }
             }
         }

@@ -103,4 +103,14 @@
     <string name="tomato">Tomato</string>
     <string name="lettuce">Lettuce</string>
     <string name="cheese">Cheese</string>
+    <string name="some_text">some text</string>
+
+    //adds from astro
+    <string name="holder_some_n">\n \n \n \n</string>
+    <string name="_08_08_2022">08.08.2022</string>
+    <string name="_08_48">08:48</string>
+    <string name="_9_5">9.5</string>
+    <string name="information_1_data">information 1: data\ninformation 2: data\ninformation 3: data\ninformation 4: data\ninformation 5: data</string>
+
+
 </resources>

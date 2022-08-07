@@ -17,21 +17,21 @@ object RepositoryRv {
     )
 
     private val listNoteRvConstraintLayout: List<NoteRv> = listOf(
-        NoteRv("ConstraintLayout1", "rv_constraint_layout_1"),
-        NoteRv("ConstraintLayout2", "rv_constraint_layout_2"),
-        NoteRv("ConstraintLayout3", "rv_constraint_layout_3")
+        NoteRv("ConstraintLayout", "rv_constraint_layout_1"),
+//        NoteRv("ConstraintLayout2", "rv_constraint_layout_2"),
+//        NoteRv("ConstraintLayout3", "rv_constraint_layout_3")
     )
 
     private val listNoteBottomNav: List<NoteRv> = listOf(
-        NoteRv("Bottom Nav 1", "rv_bottom_nav_1"),
-        NoteRv("Bottom Nav 2", "rv_bottom_nav_2"),
-        NoteRv("Bottom Nav 3", "rv_bottom_nav_3")
+        NoteRv("Bottom Nav", "rv_bottom_nav_1"),
+//        NoteRv("Bottom Nav 2", "rv_bottom_nav_2"),
+//        NoteRv("Bottom Nav 3", "rv_bottom_nav_3")
     )
 
     private val listNoteRvBottomAppBar: List<NoteRv> = listOf(
-        NoteRv("Bottom App Bar 1", "rv_bottom_app_bar_1"),
-        NoteRv("Bottom App Bar 2", "rv_bottom_app_bar_2"),
-        NoteRv("Bottom App Bar 3", "rv_bottom_app_bar_3")
+        NoteRv("Bottom App Bar", "rv_bottom_app_bar_1"),
+//        NoteRv("Bottom App Bar 2", "rv_bottom_app_bar_2"),
+//        NoteRv("Bottom App Bar 3", "rv_bottom_app_bar_3")
     )
 
     private val listNoteRvDemoRV: List<NoteRv> = listOf(

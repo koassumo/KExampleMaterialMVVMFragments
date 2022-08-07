@@ -43,15 +43,15 @@ class RvAdapterBottomNav(fragmentContext: Context) : RecyclerView.Adapter<RvAdap
                 val activity = adapterContext as AppCompatActivity
                 //вариант val activity = it.context as AppCompatActivity
                 when (ttt) {
-                    "Bottom Nav 1" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
+                    "Bottom Nav" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
                         R.id.container, BottomNavFragment()
                     )?.addToBackStack(null)?.commit()
-                    "Bottom Nav 2" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
-                        R.id.container, BottomNavFragment()
-                    )?.addToBackStack(null)?.commit()
-                    "Bottom Nav 3" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
-                        R.id.container, BottomNavFragment()
-                    )?.addToBackStack(null)?.commit()
+//                    "Bottom Nav 2" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
+//                        R.id.container, BottomNavFragment()
+//                    )?.addToBackStack(null)?.commit()
+//                    "Bottom Nav 3" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
+//                        R.id.container, BottomNavFragment()
+//                    )?.addToBackStack(null)?.commit()
                 }
             }
         }
