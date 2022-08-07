@@ -49,7 +49,7 @@ object RepositoryRv {
 
     private val listNoteRvAnimation: List<NoteRv> = listOf(
         NoteRv("Transition Set", "rv_anim_transition"),
-        NoteRv("Increase image", "rv_anim_increase"),
+        NoteRv("Increased Image", "rv_anim_increase"),
         NoteRv("Arc motion", "rv_anim_arco"),
         NoteRv("Randomly\nShuffles", "rv_anim_random"),
         NoteRv("Motion View", "rv_anim_motion")
