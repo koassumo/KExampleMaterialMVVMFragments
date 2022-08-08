@@ -120,11 +120,7 @@
     <string name="screen_1">Screen 1</string>
     <string name="screen_2">Screen 2</string>
     <string name="credits">Credits</string>
-    <string name="credits_text">
-        Version 1.1\n
-        Created by Igor Semenov\n
-        Copyright 2022 Igor Semenov
-    </string>
+    <string name="credits_text">Version 1.1\nCreated by Igor Semenov\nCopyright 2022 Igor Semenov</string>
     <string name="no_description">no description</string>
     <string name="go">Go</string>
     <string name="this_is_bottom_navigation_bar">This is Bottom Navigation Bar</string>
