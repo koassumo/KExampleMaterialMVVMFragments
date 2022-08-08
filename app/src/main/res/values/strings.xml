@@ -29,7 +29,7 @@
     <string name="filter_chip">Filter chip</string>
     <string name="title_different_types_chips">Different types</string>
     <string name="title_different_recolors_chips">Different colors and others</string>
-    <string name="normal_text_on_background">Normal text on Background fills room here. Normal text on Background fills room here. Normal text on Background fills room here.</string>
+    <string name="normal_text_on_background">Normal text on Background fills room here.</string>
     <string name="top_app_bar">Top App Bar</string>
     <string name="change_theme_button">Change!</string>
     <string name="text_button">Text button</string>
@@ -122,10 +122,22 @@
     <string name="credits">Credits</string>
     <string name="credits_text">
         Version 1.1\n
-        Copyright 2022\n
         Created by Igor Semenov\n
-        Icon Design:\n
-        <a href="https://www.flaticon.com/free-icons/letter-m" title="letter m icons">Letter m icons created by Laisa Islam Ani - Flaticon</a>
+        Copyright 2022 Igor Semenov
     </string>
+    <string name="no_description">no description</string>
+    <string name="go">Go</string>
+    <string name="this_is_bottom_navigation_bar">This is Bottom Navigation Bar</string>
+    <string name="tab_1">Tab 1</string>
+    <string name="tab_2">Tab 2</string>
+    <string name="tab_3">Tab 3</string>
+    <string name="card">Card</string>
+    <string name="outlined_box">Outlined Box</string>
+    <string name="filled_box">Filled Box</string>
+    <string name="radio_button">Radio Button</string>
+    <string name="checkbox">Checkbox</string>
+    <string name="checked_chip">Checked chip</string>
+    <string name="uncheckable">Uncheckable</string>
+    <string name="unchecked">Unchecked</string>
 
 </resources>

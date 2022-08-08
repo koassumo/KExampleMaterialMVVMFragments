@@ -90,6 +90,8 @@
                     android:text="@string/yellow" />
             </com.google.android.material.button.MaterialButtonToggleGroup>
 
+            <View style="@style/divider_line_style" />
+
 
             <com.google.android.material.textview.MaterialTextView
                 style="@style/heading_text_style"
@@ -120,10 +122,9 @@
 
             </GridLayout>
 
-            <View style="@style/divider_line_style" />
-
             <TextView
                 style="@style/normal_text_style"
+                android:layout_marginStart="@dimen/step_normal"
                 android:text="@string/normal_text_on_background" />
 
             <HorizontalScrollView
@@ -141,27 +142,27 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checked="true"
-                        android:text="Checked chip" />
+                        android:text="@string/checked_chip" />
 
                     <com.google.android.material.chip.Chip
                         style="@style/Widget.MaterialComponents.Chip.Choice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Unchecked" />
+                        android:text="@string/unchecked" />
 
                     <com.google.android.material.chip.Chip
                         style="@style/Widget.MaterialComponents.Chip.Choice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checkable="false"
-                        android:text="Uncheckable" />
+                        android:text="@string/uncheckable" />
 
                     <com.google.android.material.chip.Chip
                         style="@style/Widget.MaterialComponents.Chip.Choice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checked="true"
-                        android:text="Checked chip" />
+                        android:text="@string/checked_chip" />
                 </com.google.android.material.chip.ChipGroup>
             </HorizontalScrollView>
 
@@ -170,16 +171,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clipToPadding="false"
-                android:paddingHorizontal="16dp">
+                android:paddingHorizontal="@dimen/step_normal">
 
                 <com.google.android.material.checkbox.MaterialCheckBox
                     android:id="@+id/checkBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:checked="true"
-                    android:text="Checkbox" />
+                    android:text="@string/checkbox" />
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
                     android:id="@+id/radioButton"
@@ -187,7 +187,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:text="Radio Button" />
+                    android:text="@string/radio_button" />
 
                 <com.google.android.material.switchmaterial.SwitchMaterial
                     android:id="@+id/switchMaterial"
@@ -196,7 +196,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:checked="true"
-                    android:text="Switch" />
+                    android:text="@string/switch_1" />
             </LinearLayout>
 
             <LinearLayout
@@ -209,9 +209,9 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                     android:layout_width="170dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="@dimen/step_normal"
                     android:layout_marginTop="18dp"
-                    android:hint="Filled Box Text Field">
+                    android:hint="@string/filled_box">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
@@ -224,8 +224,8 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="170dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:hint="Outlined Box Text Field">
+                    android:layout_marginStart="@dimen/step_normal"
+                    android:hint="@string/outlined_box">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
@@ -248,7 +248,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Card " />
+                    android:text="@string/card" />
             </com.google.android.material.card.MaterialCardView>
 
 
@@ -274,19 +274,19 @@
                         android:id="@+id/tab1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Tab 1" />
+                        android:text="@string/tab_1" />
 
                     <com.google.android.material.tabs.TabItem
                         android:id="@+id/tab2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Tab 2" />
+                        android:text="@string/tab_2" />
 
                     <com.google.android.material.tabs.TabItem
                         android:id="@+id/tab3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Tab 3" />
+                        android:text="@string/tab_3" />
                 </com.google.android.material.tabs.TabLayout>
 
                 <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -303,17 +303,20 @@
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <com.google.android.material.bottomnavigation.BottomNavigationView
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
-                app:backgroundTint="?attr/myColorBottomNavigationView">
+                android:layout_height="@dimen/step_xxx_large" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="This is Bottom Navigation Bar" />
-            </com.google.android.material.bottomnavigation.BottomNavigationView>
+<!--            <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="140dp"-->
+<!--                app:backgroundTint="?attr/myColorBottomNavigationView">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/this_is_bottom_navigation_bar" />-->
+<!--            </com.google.android.material.bottomnavigation.BottomNavigationView>-->
         </LinearLayout>
 
     </ScrollView>
@@ -336,8 +339,7 @@
         android:layout_height="wrap_content"
         app:layout_anchor="@id/bottom_app_bar"
         app:srcCompat="@drawable/ic_plus_fab"
-        app:tint="#FFFFFF" />
-
+/>
 
     <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
     <!--        android:id="@+id/bottomNavigation"-->

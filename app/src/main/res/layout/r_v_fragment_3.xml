@@ -18,15 +18,18 @@
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/fab_demo_rv"
-        android:layout_gravity="bottom"
+        android:layout_gravity="bottom|end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        android:backgroundTint="?attr/colorPrimary"
         android:elevation="@dimen/elevation_large"
         android:textAllCaps="false"
         android:text="@string/fab_add_item"
         app:icon="@drawable/ic_plus_fab"
         />
+        <!-- you may tint (e.i. change colorSecondary)
+        android:backgroundTint="?attr/colorPrimary"-->
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
