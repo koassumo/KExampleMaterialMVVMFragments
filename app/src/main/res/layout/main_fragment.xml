@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.fragment_main.MainFragment">
+    tools:context=".ui.fragment_main.MainFragment"
+    android:id="@+id/main_nsv">
 
 
     <LinearLayout
@@ -75,15 +76,15 @@
             android:orientation="horizontal" />
 
 
-        <com.google.android.material.textview.MaterialTextView
-            style="@style/heading_text_style"
-            android:text="@string/chips" />
-        <!--  RV Не забываем !!!!! android:clipToPadding="false"-->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_chips"
-            style="@style/padding_start_top_end_normal_rv"
-            android:clipToPadding="false"
-            android:orientation="horizontal" />
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            style="@style/heading_text_style"-->
+<!--            android:text="@string/chips" />-->
+<!--        &lt;!&ndash;  RV Не забываем !!!!! android:clipToPadding="false"&ndash;&gt;-->
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rv_chips"-->
+<!--            style="@style/padding_start_top_end_normal_rv"-->
+<!--            android:clipToPadding="false"-->
+<!--            android:orientation="horizontal" />-->
 
         <com.google.android.material.textview.MaterialTextView
             style="@style/heading_text_style"
@@ -169,6 +170,26 @@
                 android:scaleType="centerCrop"
                 android:alpha="@dimen/alpha_img_large"/>
         </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_marginStart="@dimen/step_normal"
+            android:layout_marginEnd="@dimen/step_normal"
+            android:layout_marginTop="@dimen/step_xx_large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="@dimen/text_size_large"
+            android:text="@string/credits"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_margin="@dimen/step_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/grey_700"
+            android:text="@string/credits_text"
+            />
 
         <View
             android:layout_width="match_parent"

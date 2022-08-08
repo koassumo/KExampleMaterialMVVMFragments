@@ -15,8 +15,8 @@ class RVViewModel2 : ViewModel() {
     }
 
     private fun updateListFirst() {
-        var listData: MutableList<NoteDemoRV> = RepositoryDemoRV.getListNoteDemoRV().toMutableList()
-        var listPair: ArrayList<Pair<NoteDemoRV, Boolean>> = ArrayList ()
+        val listData: MutableList<NoteDemoRV> = RepositoryDemoRV.getListNoteDemoRV().toMutableList()
+        val listPair: ArrayList<Pair<NoteDemoRV, Boolean>> = ArrayList ()
         for (i in listData) {
             listPair.add(i to false)
         }

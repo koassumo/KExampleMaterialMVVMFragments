@@ -28,7 +28,7 @@ class CheckboxesFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(CheckboxesViewModel::class.java)
 
-        checkbox_4.isChecked = true
+        //checkbox_4.isChecked = true
         //checkbox_2.setSelectAllOnFocus(true)
     }
 

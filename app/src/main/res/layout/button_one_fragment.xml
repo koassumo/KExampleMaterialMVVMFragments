@@ -1,91 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.buttons.pages.ButtonOneFragment"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/my_transition_container"
+    tools:context=".ui.fragments.buttons.pages.ButtonOneFragment">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
 
-    <LinearLayout
-        android:id="@+id/my_transition_container"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:orientation="vertical"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent">
-
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/heading_text_style"
+            android:text="@string/elevated_button" />
         <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.Button"
+            android:id="@+id/btn_0"
+            style="@style/button_style"
+            app:cornerRadius="@dimen/button_rounded_corner"
+            android:backgroundTint="?attr/colorPrimaryDark"
+            android:textColor="?attr/colorPrimary"
+            android:elevation="@dimen/elevation_large"
+            android:text="@string/press_button" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/heading_text_style"
+            android:text="@string/filled_button" />
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_1"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAllCaps="false"
             android:layout_marginStart="@dimen/step_start_normal"
             android:layout_marginTop="@dimen/step_top_normal"
-            android:text="Contained (Raised) Button" />
+            app:cornerRadius="@dimen/button_rounded_corner"
+            android:text="@string/press_button" />
 
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/heading_text_style"
+            android:text="@string/filled_tonal_button" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_2"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_marginStart="@dimen/step_start_normal"
+            android:layout_marginTop="@dimen/step_top_normal"
+            android:backgroundTint="?attr/colorPrimaryDark"
+            android:textColor="?attr/colorOnSecondary"
+            app:cornerRadius="@dimen/button_rounded_corner"
+            android:text="@string/press_button" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/heading_text_style"
+            android:text="@string/outlined_button" />
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:id="@+id/btn_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/step_start_normal"
-            android:layout_marginTop="@dimen/step_top_normal"
-            android:text="Outlined Button" />
-
-        <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:id="@+id/btn_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAllCaps="false"
             android:layout_marginStart="@dimen/step_start_normal"
             android:layout_marginTop="@dimen/step_top_normal"
-            android:text="Text Button" />
+            app:cornerRadius="@dimen/button_rounded_corner"
+            app:strokeColor="@color/black"
+            android:text="@string/press_button" />
 
-        <TextView
-            android:id="@+id/tv_1"
+        <com.google.android.material.textview.MaterialTextView
             style="@style/heading_text_style"
-            android:text="laskfjlk"/>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginBottom="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageView
+            android:text="@string/text_button" />
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:id="@+id/btn_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:layout_marginLeft="7dp"
-            android:layout_marginEnd="7dp"
-            android:layout_marginRight="7dp"
-            android:src="@drawable/swipe_indicator_active" />
+            android:textAllCaps="false"
+            android:layout_marginStart="@dimen/step_start_normal"
+            android:layout_marginTop="@dimen/step_top_normal"
+            app:cornerRadius="@dimen/button_rounded_corner"
+            android:text="@string/press_button" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:layout_marginLeft="7dp"
-            android:layout_marginEnd="7dp"
-            android:layout_marginRight="7dp"
-            android:src="@drawable/swipe_indicator_passive" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_1"-->
+<!--            style="@style/heading_text_style"-->
+<!--            android:text="laskfjlk"/>-->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:layout_marginLeft="7dp"
-            android:layout_marginEnd="7dp"
-            android:layout_marginRight="7dp"
-            android:src="@drawable/swipe_indicator_passive" />
-    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal|bottom"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="7dp"-->
+<!--            android:layout_marginLeft="7dp"-->
+<!--            android:layout_marginEnd="7dp"-->
+<!--            android:layout_marginRight="7dp"-->
+<!--            android:src="@drawable/swipe_indicator_active" />-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="7dp"-->
+<!--            android:layout_marginLeft="7dp"-->
+<!--            android:layout_marginEnd="7dp"-->
+<!--            android:layout_marginRight="7dp"-->
+<!--            android:src="@drawable/swipe_indicator_passive" />-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="7dp"-->
+<!--            android:layout_marginLeft="7dp"-->
+<!--            android:layout_marginEnd="7dp"-->
+<!--            android:layout_marginRight="7dp"-->
+<!--            android:src="@drawable/swipe_indicator_passive" />-->
+<!--    </LinearLayout>-->
+
+        </LinearLayout>
+</androidx.core.widget.NestedScrollView>

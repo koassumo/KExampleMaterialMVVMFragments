@@ -33,10 +33,10 @@ class ViewPagerAdapter(private val fragmentManager: FragmentManager) :
 
     override fun getPageTitle(position: Int): CharSequence? {
         return when (position) {
-            0 -> "Text buttons"
-            1 -> "Toggle buttons"
-            2 -> "Gradient buttons"
-            else -> "Text buttons"
+            0 -> "Single"
+            1 -> "Segmented"
+            2 -> "Floating"
+            else -> "Single"
         }
     }
 }

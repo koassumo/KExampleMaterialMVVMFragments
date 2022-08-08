@@ -1,83 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.fragments.buttons.pages.ButtonThreeFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent">
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/heading_text_style"
+        android:text="@string/floating_action_button" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        style="@style/button_style"
+        app:cornerRadius="@dimen/button_rounded_corner"
+        android:layout_margin="@dimen/fab_margin"
+        android:backgroundTint="?attr/colorPrimary"
+        android:elevation="@dimen/elevation_large"
+        android:src="@drawable/ic_plus_fab" />
 
-        <com.google.android.material.textview.MaterialTextView
-            style="@style/TextAppearance.MaterialComponents.Headline5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/step_start_normal"
-            android:layout_marginTop="@dimen/step_top_normal"
-            android:text="Toggle Image Button" />
-
-        <!-- Create:
-        1. ToggleButton (in code below)
-        2. In /res/drawable/ :
-            - button_image_ic_toggle (including images references)
-            - button_image_ic_toggle_bg (background)
-        3. In /styles.xml :
-            - toggle
-            - toggleButton
-        -->
-
-        <ToggleButton
-            android:id="@+id/toggleImageButton"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_margin="@dimen/step_start_normal"
-            android:layout_gravity="left"
-            style="@style/toggleButton"
-            android:background="@drawable/button_image_ic_toggle_bg"/>
-
-    </LinearLayout>
-
-    <LinearLayout
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/heading_text_style"
+        android:text="@string/floating_ext_action_button" />
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_ext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginBottom="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_margin="@dimen/fab_margin"
+        android:backgroundTint="?attr/colorPrimary"
+        android:elevation="@dimen/elevation_large"
+        android:textAllCaps="false"
+        android:text="@string/fab_add_item"
+        app:icon="@drawable/ic_plus_fab"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:layout_marginLeft="7dp"
-            android:layout_marginEnd="7dp"
-            android:layout_marginRight="7dp"
-            android:src="@drawable/swipe_indicator_passive" />
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            style="@style/TextAppearance.MaterialComponents.Headline5"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/step_start_normal"-->
+<!--            android:layout_marginTop="@dimen/step_top_normal"-->
+<!--            android:text="Toggle Image Button" />-->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:layout_marginLeft="7dp"
-            android:layout_marginEnd="7dp"
-            android:layout_marginRight="7dp"
-            android:src="@drawable/swipe_indicator_passive" />
+<!--        &lt;!&ndash; Create:-->
+<!--        1. ToggleButton (in code below)-->
+<!--        2. In /res/drawable/ :-->
+<!--            - button_image_ic_toggle (including images references)-->
+<!--            - button_image_ic_toggle_bg (background)-->
+<!--        3. In /styles.xml :-->
+<!--            - toggle-->
+<!--            - toggleButton-->
+<!--        &ndash;&gt;-->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:layout_marginLeft="7dp"
-            android:layout_marginEnd="7dp"
-            android:layout_marginRight="7dp"
-            android:src="@drawable/swipe_indicator_active" />
-    </LinearLayout>
+<!--        <ToggleButton-->
+<!--            android:id="@+id/toggleImageButton"-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:layout_margin="@dimen/step_start_normal"-->
+<!--            android:layout_gravity="left"-->
+<!--            style="@style/toggleButton"-->
+<!--            android:background="@drawable/button_image_ic_toggle_bg"/>-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal|bottom"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="7dp"-->
+<!--            android:layout_marginLeft="7dp"-->
+<!--            android:layout_marginEnd="7dp"-->
+<!--            android:layout_marginRight="7dp"-->
+<!--            android:src="@drawable/swipe_indicator_passive" />-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="7dp"-->
+<!--            android:layout_marginLeft="7dp"-->
+<!--            android:layout_marginEnd="7dp"-->
+<!--            android:layout_marginRight="7dp"-->
+<!--            android:src="@drawable/swipe_indicator_passive" />-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="7dp"-->
+<!--            android:layout_marginLeft="7dp"-->
+<!--            android:layout_marginEnd="7dp"-->
+<!--            android:layout_marginRight="7dp"-->
+<!--            android:src="@drawable/swipe_indicator_active" />-->
+<!--    </LinearLayout>-->
+
+</LinearLayout>

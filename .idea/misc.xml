@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/drawable/button_image_ic_toggle_bg.xml" value="0.108" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_36.xml" value="0.328" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/drawable/rounded_corner.xml" value="0.1415" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/+list_apod_fragment.xml" value="0.23157894736842105" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/_plus_list_apod_fragment.xml" value="0.23157894736842105" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/animation_five_fragment.xml" value="0.19444444444444445" />
@@ -17,16 +18,20 @@
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/bottom_sheet_fragment.xml" value="0.11388888888888889" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.11388888888888889" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/button_one_fragment.xml" value="0.11388888888888889" />
-        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/button_three_fragment.xml" value="0.11388888888888889" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/button_three_fragment.xml" value="0.18" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/button_two_fragment.xml" value="0.11388888888888889" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/buttons_fragment.xml" value="0.11388888888888889" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/checkboxes_fragment.xml" value="0.16458333333333333" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/chips_fragment.xml" value="0.1840846994535519" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/constrained_layout_fragment.xml" value="0.2293159609120521" />
-        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/edit_text_filed_fragment.xml" value="0.23157894736842105" />
-        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/edit_text_fragment.xml" value="0.11388888888888889" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/edit_text_filed_fragment.xml" value="0.2" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/edit_text_fragment.xml" value="0.17" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_one_fragment.xml" value="0.15902777777777777" />
-        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_rv_header.xml" value="0.16180555555555556" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_rv_header.xml" value="0.25" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_rv_main_common.xml" value="0.5" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_rv_medium.xml" value="0.2" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_rv_medium_simple.xml" value="0.16319444444444445" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_rv_small.xml" value="0.33" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_rv_small_simple.xml" value="0.15902777777777777" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_rv_typography.xml" value="0.15902777777777777" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/item_three_fragment.xml" value="0.15902777777777777" />
@@ -35,15 +40,17 @@
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/main_fragment.xml" value="0.15902777777777777" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/nav_bar_fragment.xml" value="0.15902777777777777" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/r_v_fragment.xml" value="0.15902777777777777" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/r_v_fragment_3.xml" value="0.18" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/radio_fragment.xml" value="0.16458333333333333" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/switches_fragment.xml" value="0.16458333333333333" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/text_field_fragment.xml" value="0.16180555555555556" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/themes_fragment.xml" value="0.25" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/layout/top_appbar_fragment.xml" value="0.1" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.2293159609120521" />
         <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/menu/menu_bottom_navigation_view.xml" value="0.2293159609120521" />
+        <entry key="..\:/_android/KExampleMaterialMVVMFragments/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.171" />
       </map>
     </option>
-  </component>
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/kexamplematerialmvvmfragments/ui/MTest.kt" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

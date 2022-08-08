@@ -8,7 +8,7 @@ import com.example.kexamplematerialmvvmfragments.ui.fragment_main.MainFragment
 class MainActivity : AppCompatActivity() {
 
     companion object {
-        var themeFlag = 1
+        var themeFlag = 0
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

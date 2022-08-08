@@ -38,42 +38,42 @@ class ConstrainedLayoutFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(ConstrainedLayoutViewModel::class.java)
         // TODO: Use the ViewModel
 
-        // Батоны
-        btnFragmentEditText.setOnClickListener{
-            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, EditTextFragment())?.addToBackStack(null)?.commit()
-        }
-
-        btnFragmentBottomSheet.setOnClickListener{
-            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, BottomSheetFragment())?.addToBackStack(null)?.commit()
-        }
-
-        btnFragmentBottomAppBar.setOnClickListener{
-            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, BottomAppBarFragment())?.addToBackStack(null)?.commit()
-        }
-
-        btnFragmentChips.setOnClickListener{
-            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, ChipsFragment())?.addToBackStack(null)?.commit()
-        }
-
-        btnFragmentThemes.setOnClickListener{
-            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, ThemesFragment())?.addToBackStack(null)?.commit()
-        }
-
-        btnFragmentTypography.setOnClickListener{
-            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, TypographyFragment())?.addToBackStack(null)?.commit()
-        }
-
-        btnFragmentButtons.setOnClickListener{
-            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, ButtonsFragment())?.addToBackStack(null)?.commit()
-        }
-
-        btnFragmentNavBar.setOnClickListener{
-            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, BottomNavFragment())?.addToBackStack(null)?.commit()
-        }
-
-        btnFragmentRV.setOnClickListener{
-            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, RVFragment())?.addToBackStack(null)?.commit()
-        }
+//        // Батоны
+//        btnFragmentEditText.setOnClickListener{
+//            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, EditTextFragment())?.addToBackStack(null)?.commit()
+//        }
+//
+//        btnFragmentBottomSheet.setOnClickListener{
+//            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, BottomSheetFragment())?.addToBackStack(null)?.commit()
+//        }
+//
+//        btnFragmentBottomAppBar.setOnClickListener{
+//            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, BottomAppBarFragment())?.addToBackStack(null)?.commit()
+//        }
+//
+//        btnFragmentChips.setOnClickListener{
+//            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, ChipsFragment())?.addToBackStack(null)?.commit()
+//        }
+//
+//        btnFragmentThemes.setOnClickListener{
+//            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, ThemesFragment())?.addToBackStack(null)?.commit()
+//        }
+//
+//        btnFragmentTypography.setOnClickListener{
+//            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, TypographyFragment())?.addToBackStack(null)?.commit()
+//        }
+//
+//        btnFragmentButtons.setOnClickListener{
+//            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, ButtonsFragment())?.addToBackStack(null)?.commit()
+//        }
+//
+//        btnFragmentNavBar.setOnClickListener{
+//            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, BottomNavFragment())?.addToBackStack(null)?.commit()
+//        }
+//
+//        btnFragmentRV.setOnClickListener{
+//            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, RVFragment())?.addToBackStack(null)?.commit()
+//        }
 
 
     }

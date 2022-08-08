@@ -16,7 +16,7 @@ class ButtonsFragment : Fragment() {
         fun newInstance() = ButtonsFragment()
     }
 
-    private lateinit var viewModel: ButtonsViewModel
+    //private lateinit var viewModel: ButtonsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,15 +32,15 @@ class ButtonsFragment : Fragment() {
         view_pager.adapter = ViewPagerAdapter(childFragmentManager)
         tab_layout.setupWithViewPager(view_pager)
 
-        tab_layout.getTabAt(0)?.setIcon(R.drawable.ic_archive)
-        tab_layout.getTabAt(1)?.setIcon(R.drawable.ic_hamburger_menu_bottom_bar)
-        tab_layout.getTabAt(2)?.setIcon(R.drawable.ic_send)
+        tab_layout.getTabAt(0)?.setIcon(R.drawable.ic_button_square_single_24)
+        tab_layout.getTabAt(1)?.setIcon(R.drawable.ic_button_grid_multi_24)
+        tab_layout.getTabAt(2)?.setIcon(R.drawable.ic_button_circle_floating_24)
 
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ButtonsViewModel::class.java)
+        //viewModel = ViewModelProvider(this).get(ButtonsViewModel::class.java)
 
     }
 

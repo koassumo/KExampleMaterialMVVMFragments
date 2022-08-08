@@ -43,15 +43,15 @@ class RvAdapterBottomAppBar(fragmentContext: Context) : RecyclerView.Adapter<RvA
                 val activity = adapterContext as AppCompatActivity
                 //вариант val activity = it.context as AppCompatActivity
                 when (ttt) {
-                    "Bottom App Bar 1" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
+                    "Bottom App Bar" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
                         R.id.container, BottomAppBarFragment()
                     )?.addToBackStack(null)?.commit()
-                    "Bottom App Bar 2" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
-                        R.id.container, BottomAppBarFragment()
-                    )?.addToBackStack(null)?.commit()
-                    "Bottom App Bar 3" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
-                        R.id.container, BottomAppBarFragment()
-                    )?.addToBackStack(null)?.commit()
+//                    "Bottom App Bar 2" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
+//                        R.id.container, BottomAppBarFragment()
+//                    )?.addToBackStack(null)?.commit()
+//                    "Bottom App Bar 3" -> activity?.supportFragmentManager?.beginTransaction()?.replace(
+//                        R.id.container, BottomAppBarFragment()
+//                    )?.addToBackStack(null)?.commit()
                 }
             }
         }

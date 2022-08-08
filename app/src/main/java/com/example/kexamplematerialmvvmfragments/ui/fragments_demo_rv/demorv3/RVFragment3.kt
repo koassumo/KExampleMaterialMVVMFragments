@@ -10,7 +10,8 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kexamplematerialmvvmfragments.R
-import kotlinx.android.synthetic.main.r_v_fragment.*
+import kotlinx.android.synthetic.main.r_v_fragment.rv_items
+import kotlinx.android.synthetic.main.r_v_fragment_3.*
 
 class RVFragment3 : Fragment() {
 
@@ -23,7 +24,7 @@ class RVFragment3 : Fragment() {
     lateinit var adapter: RVAdapter3
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.r_v_fragment, container, false)
+        return inflater.inflate(R.layout.r_v_fragment_3, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -33,7 +34,7 @@ class RVFragment3 : Fragment() {
         adapter = RVAdapter3(context!!)
         rv_items.adapter = adapter
         rv_items.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        rv_items.addItemDecoration(DividerItemDecoration(context, LinearLayoutManager.VERTICAL))
+        //rv_items.addItemDecoration(DividerItemDecoration(context, LinearLayoutManager.VERTICAL))
         fab_demo_rv.setOnClickListener { adapter.appendItem() }
     }
 

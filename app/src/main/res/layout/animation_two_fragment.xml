@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:src="@drawable/rv_chips"
+        android:src="@drawable/rv_dem1"
         />
 
 </FrameLayout>

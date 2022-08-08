@@ -13,12 +13,8 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textview.MaterialTextView
-            style="@style/TextAppearance.MaterialComponents.Headline5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/step_start_normal"
-            android:layout_marginTop="@dimen/step_top_normal"
-            android:text="Single Selected" />
+            style="@style/heading_text_style"
+            android:text="@string/single_selected" />
 
         <com.google.android.material.button.MaterialButtonToggleGroup
             android:id="@+id/toggleButtonSingle"
@@ -40,14 +36,18 @@
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button 1" />
+                android:textAllCaps="false"
+                app:cornerRadius="@dimen/button_rounded_corner"
+                android:text="@string/button_1" />
 
             <Button
                 android:id="@+id/button2"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button 2"
+                android:textAllCaps="false"
+                app:cornerRadius="@dimen/button_rounded_corner"
+                android:text="@string/button_2"
                 />
 
             <Button
@@ -55,16 +55,14 @@
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button 3" />
+                android:textAllCaps="false"
+                app:cornerRadius="@dimen/button_rounded_corner"
+                android:text="@string/button_3" />
         </com.google.android.material.button.MaterialButtonToggleGroup>
 
         <com.google.android.material.textview.MaterialTextView
-            style="@style/TextAppearance.MaterialComponents.Headline5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/step_start_normal"
-            android:layout_marginTop="@dimen/step_top_normal"
-            android:text="Multi Selected" />
+            style="@style/heading_text_style"
+            android:text="@string/multi_selected" />
 
         <com.google.android.material.button.MaterialButtonToggleGroup
             android:id="@+id/toggleButtonMulti"
@@ -72,7 +70,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/step_start_normal"
             android:layout_marginTop="@dimen/step_top_normal"
-            app:checkedButton="@+id/buttonMulti1"
             >
 
             <Button
@@ -80,63 +77,69 @@
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button 1"
-                android:textOff="on 1"
-                android:textOn="Bu" />
+                android:textAllCaps="false"
+                app:cornerRadius="@dimen/button_rounded_corner"
+                android:text="@string/button_1" />
+<!--            android:textOff="on 1"-->
+<!--            android:textOn="Bu"-->
 
             <Button
                 android:id="@+id/buttonMulti2"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button 2" />
+                android:textAllCaps="false"
+                app:cornerRadius="@dimen/button_rounded_corner"
+                android:text="@string/button_2" />
 
             <Button
                 android:id="@+id/buttonMulti3"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button 3" />
+                android:textAllCaps="false"
+                app:cornerRadius="@dimen/button_rounded_corner"
+                android:text="@string/button_3" />
         </com.google.android.material.button.MaterialButtonToggleGroup>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginBottom="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal|bottom"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:layout_marginLeft="7dp"
-            android:layout_marginEnd="7dp"
-            android:layout_marginRight="7dp"
-            android:src="@drawable/swipe_indicator_passive" />
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="7dp"-->
+<!--            android:layout_marginLeft="7dp"-->
+<!--            android:layout_marginEnd="7dp"-->
+<!--            android:layout_marginRight="7dp"-->
+<!--            android:src="@drawable/swipe_indicator_passive" />-->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:layout_marginLeft="7dp"
-            android:layout_marginEnd="7dp"
-            android:layout_marginRight="7dp"
-            android:src="@drawable/swipe_indicator_active" />
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="7dp"-->
+<!--            android:layout_marginLeft="7dp"-->
+<!--            android:layout_marginEnd="7dp"-->
+<!--            android:layout_marginRight="7dp"-->
+<!--            android:src="@drawable/swipe_indicator_active" />-->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:layout_marginLeft="7dp"
-            android:layout_marginEnd="7dp"
-            android:layout_marginRight="7dp"
-            android:src="@drawable/swipe_indicator_passive" />
-    </LinearLayout>
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="7dp"-->
+<!--            android:layout_marginLeft="7dp"-->
+<!--            android:layout_marginEnd="7dp"-->
+<!--            android:layout_marginRight="7dp"-->
+<!--            android:src="@drawable/swipe_indicator_passive" />-->
+<!--    </LinearLayout>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

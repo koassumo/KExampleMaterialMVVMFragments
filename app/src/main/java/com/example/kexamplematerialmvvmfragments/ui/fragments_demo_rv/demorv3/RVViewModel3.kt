@@ -16,13 +16,13 @@ class RVViewModel3 : ViewModel() {
 
     private fun updateListFirst() {
         val listData: MutableList<NoteDemoRV> = RepositoryDemoRV.getListNoteDemoRV().toMutableList()
-        listData.add(0, NoteDemoRV(null, "This Is Header", null))
+        listData.add(0, NoteDemoRV(null, "Top Header", null))
         var i = 6
         while (listData.size > i) {
-            listData.add(i, NoteDemoRV(null, "This Is Next Five Header", null))
+            listData.add(i, NoteDemoRV(null, "Inner Header", null))
             i += 6
         }
-        listData.add(NoteDemoRV(null, "This Is Footer", null))
+        listData.add(NoteDemoRV(null, "Footer", null))
 
         //    <<<<<<<<<<<<<<<<<<<[[   3. пихаем данные в вышку liveData - она разберется
         liveData.value = listData

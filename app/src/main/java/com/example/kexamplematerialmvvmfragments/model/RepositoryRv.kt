@@ -17,28 +17,28 @@ object RepositoryRv {
     )
 
     private val listNoteRvConstraintLayout: List<NoteRv> = listOf(
-        NoteRv("ConstraintLayout1", "rv_constraint_layout_1"),
-        NoteRv("ConstraintLayout2", "rv_constraint_layout_2"),
-        NoteRv("ConstraintLayout3", "rv_constraint_layout_3")
+        NoteRv("ConstraintLayout", "rv_constraint_layout_1"),
+//        NoteRv("ConstraintLayout2", "rv_constraint_layout_2"),
+//        NoteRv("ConstraintLayout3", "rv_constraint_layout_3")
     )
 
     private val listNoteBottomNav: List<NoteRv> = listOf(
-        NoteRv("Bottom Nav 1", "rv_bottom_nav_1"),
-        NoteRv("Bottom Nav 2", "rv_bottom_nav_2"),
-        NoteRv("Bottom Nav 3", "rv_bottom_nav_3")
+        NoteRv("Bottom Nav", "rv_bottom_nav_1"),
+//        NoteRv("Bottom Nav 2", "rv_bottom_nav_2"),
+//        NoteRv("Bottom Nav 3", "rv_bottom_nav_3")
     )
 
     private val listNoteRvBottomAppBar: List<NoteRv> = listOf(
-        NoteRv("Bottom App Bar 1", "rv_bottom_app_bar_1"),
-        NoteRv("Bottom App Bar 2", "rv_bottom_app_bar_2"),
-        NoteRv("Bottom App Bar 3", "rv_bottom_app_bar_3")
+        NoteRv("Bottom App Bar", "rv_bottom_app_bar_1"),
+//        NoteRv("Bottom App Bar 2", "rv_bottom_app_bar_2"),
+//        NoteRv("Bottom App Bar 3", "rv_bottom_app_bar_3")
     )
 
     private val listNoteRvDemoRV: List<NoteRv> = listOf(
-        NoteRv("Demo Recycler View 1", "rv_demo_rv_1"),
-        NoteRv("Demo Recycler View 2", "rv_demo_rv_2"),
-        NoteRv("Demo Recycler View 3", "rv_demo_rv_3"),
-        NoteRv("Demo Recycler View 4", "rv_demo_rv_4")
+        //NoteRv("Demo Recycler View 1", "rv_demo_rv_1"),
+        NoteRv("Simple Recycler View", "rv_demo_rv_2"),
+        NoteRv("Modified Recycler View", "rv_demo_rv_3"),
+        //NoteRv("Demo Recycler View 4", "rv_demo_rv_4")
     )
 
     private val listNoteRvTabs: List<NoteRv> = listOf(
@@ -49,7 +49,7 @@ object RepositoryRv {
 
     private val listNoteRvAnimation: List<NoteRv> = listOf(
         NoteRv("Transition Set", "rv_anim_transition"),
-        NoteRv("Increase image", "rv_anim_increase"),
+        NoteRv("Increased Image", "rv_anim_increase"),
         NoteRv("Arc motion", "rv_anim_arco"),
         NoteRv("Randomly\nShuffles", "rv_anim_random"),
         NoteRv("Motion View", "rv_anim_motion")
