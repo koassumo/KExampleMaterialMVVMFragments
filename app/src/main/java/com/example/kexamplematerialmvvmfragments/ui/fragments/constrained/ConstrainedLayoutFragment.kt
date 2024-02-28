@@ -7,16 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.kexamplematerialmvvmfragments.R
-import com.example.kexamplematerialmvvmfragments.ui.fragments.bottomappbar.BottomAppBarFragment
-import com.example.kexamplematerialmvvmfragments.ui.fragments.bottomsheet.BottomSheetFragment
-import com.example.kexamplematerialmvvmfragments.ui.fragments.chips.ChipsFragment
-import com.example.kexamplematerialmvvmfragments.ui.fragments.buttons.ButtonsFragment
-import com.example.kexamplematerialmvvmfragments.ui.fragments.navbar.BottomNavFragment
-import com.example.kexamplematerialmvvmfragments.ui.fragments.edittext.EditTextFragment
-import com.example.kexamplematerialmvvmfragments.ui.fragments_demo_rv.demorv.RVFragment
-import com.example.kexamplematerialmvvmfragments.ui.fragments_settings.ThemesFragment
-import com.example.kexamplematerialmvvmfragments.ui.fragments_settings.TypographyFragment
-import kotlinx.android.synthetic.main.constrained_layout_fragment.*
+
 
 class ConstrainedLayoutFragment : Fragment() {
 
@@ -33,8 +24,8 @@ class ConstrainedLayoutFragment : Fragment() {
         return inflater.inflate(R.layout.constrained_layout_fragment, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(ConstrainedLayoutViewModel::class.java)
         // TODO: Use the ViewModel
 

@@ -4,12 +4,13 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kexamplematerialmvvmfragments.R
 import com.example.kexamplematerialmvvmfragments.model.entity.NoteRv
 import com.example.kexamplematerialmvvmfragments.ui.fragments.chips.ChipsFragment
-import kotlinx.android.synthetic.main.item_rv_main_common.view.*
 
 class RvAdapterChips (fragmentContext: Context) : RecyclerView.Adapter<RvAdapterChips.ViewHolder>() {
 
@@ -27,18 +28,19 @@ class RvAdapterChips (fragmentContext: Context) : RecyclerView.Adapter<RvAdapter
     // (#1) при создании vh - onCreateViewHolder (описан ниже) - в него передается itemView
     // (#2) при вызове у vh метода bind (описан ниже) - в него передается данные из array, чтобы связать с itemView
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+        private val tv_title = itemView.findViewById<TextView>(R.id.tv_title)
+        private val iv_pic = itemView.findViewById<ImageView>(R.id.iv_pic)
         // "находим" (для kotlin) нужные вьюшки и связываем их
         fun bind(adapterOnlyOneItemData: NoteRv) {
-            itemView.tv_title.text = adapterOnlyOneItemData.title
+            tv_title.text = adapterOnlyOneItemData.title
             when (adapterOnlyOneItemData.imageName) {
-                "rv_chips_1" -> itemView.iv_pic.setImageResource(R.drawable.rv_chips)
-                "rv_chips_2" -> itemView.iv_pic.setImageResource(R.drawable.rv_chips)
-                "rv_chips_3" -> itemView.iv_pic.setImageResource(R.drawable.rv_chips)
+                "rv_chips_1" -> iv_pic.setImageResource(R.drawable.rv_chips)
+                "rv_chips_2" -> iv_pic.setImageResource(R.drawable.rv_chips)
+                "rv_chips_3" -> iv_pic.setImageResource(R.drawable.rv_chips)
             }
 
             itemView.setOnClickListener {
-                val ttt: String = it.tv_title.text as String
+                val ttt: String = tv_title.text as String
                 val activity = adapterContext as AppCompatActivity
                 //вариант val activity = it.context as AppCompatActivity
                 when (ttt) {

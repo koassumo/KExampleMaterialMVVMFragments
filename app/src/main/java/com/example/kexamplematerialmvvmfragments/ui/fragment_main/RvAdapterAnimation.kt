@@ -4,13 +4,14 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kexamplematerialmvvmfragments.R
 import com.example.kexamplematerialmvvmfragments.model.entity.NoteRv
 import com.example.kexamplematerialmvvmfragments.ui.fragments.animation.*
 
-import kotlinx.android.synthetic.main.item_rv_main_common.view.*
 
 class RvAdapterAnimation (fragmentContext: Context) : RecyclerView.Adapter<RvAdapterAnimation.ViewHolder> (){
 
@@ -28,14 +29,16 @@ class RvAdapterAnimation (fragmentContext: Context) : RecyclerView.Adapter<RvAda
     // (#1) при создании vh - onCreateViewHolder (описан ниже) - в него передается itemView
     // (#2) при вызове у vh метода bind (описан ниже) - в него передается данные из array, чтобы связать с itemView
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val tv_title = itemView.findViewById<TextView>(R.id.tv_title)
+        private val iv_pic = itemView.findViewById<ImageView>(R.id.iv_pic)
         fun bind(adapterOnlyOneItemData: NoteRv) {
-            itemView.tv_title.text = adapterOnlyOneItemData.title
+            tv_title.text = adapterOnlyOneItemData.title
             when (adapterOnlyOneItemData.imageName) {
-                "rv_anim_transition" -> itemView.iv_pic.setImageResource(R.drawable.rv_anim_transition)
-                "rv_anim_increase" -> itemView.iv_pic.setImageResource(R.drawable.rv_anim_increase)
-                "rv_anim_arco" -> itemView.iv_pic.setImageResource(R.drawable.rv_anim_arco)
-                "rv_anim_random" -> itemView.iv_pic.setImageResource(R.drawable.rv_anim_random)
-                "rv_anim_motion" -> itemView.iv_pic.setImageResource(R.drawable.rv_anim_motion)
+                "rv_anim_transition" -> iv_pic.setImageResource(R.drawable.rv_anim_transition)
+                "rv_anim_increase" -> iv_pic.setImageResource(R.drawable.rv_anim_increase)
+                "rv_anim_arco" -> iv_pic.setImageResource(R.drawable.rv_anim_arco)
+                "rv_anim_random" -> iv_pic.setImageResource(R.drawable.rv_anim_random)
+                "rv_anim_motion" -> iv_pic.setImageResource(R.drawable.rv_anim_motion)
 
             }
             itemView.setOnClickListener {

@@ -6,9 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.kexamplematerialmvvmfragments.R
+import com.example.kexamplematerialmvvmfragments.databinding.ThemesFragmentBinding
 import com.example.kexamplematerialmvvmfragments.ui.MainActivity.Companion.themeFlag
-import kotlinx.android.synthetic.main.themes_fragment.*
 
 class ThemesFragment : Fragment() {
 
@@ -17,13 +16,15 @@ class ThemesFragment : Fragment() {
 //        var flag = 0
     }
 
+    private var _binding: ThemesFragmentBinding? = null
+    private val binding get() = _binding!!
     private lateinit var viewModel: ThemesViewModel
 
     override fun onCreateView(
 
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
 //        when (flag) {
 //            0 -> context?.setTheme(R.style.IndigoAppTheme)
@@ -32,11 +33,12 @@ class ThemesFragment : Fragment() {
 //            3 -> context?.setTheme(R.style.YellowAppTheme)
 //        }
 
-        return inflater.inflate(R.layout.themes_fragment, container, false)
+        _binding = ThemesFragmentBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(ThemesViewModel::class.java)
         // TODO: Use the ViewModel
 
@@ -45,22 +47,22 @@ class ThemesFragment : Fragment() {
     override fun onResume() {
         super.onResume()
 
-        btnIndigo.setOnClickListener{
+        binding.btnIndigo.setOnClickListener{
             themeFlag = 0
             activity?.recreate()
         }
 
-        btnGreen.setOnClickListener{
+        binding.btnGreen.setOnClickListener{
             themeFlag = 1
             activity?.recreate()
         }
 
-        btnBrown.setOnClickListener{
+        binding.btnBrown.setOnClickListener{
             themeFlag = 2
             activity?.recreate()
         }
 
-        btnYellow.setOnClickListener{
+        binding.btnYellow.setOnClickListener{
             themeFlag = 3
             activity?.recreate()
         }

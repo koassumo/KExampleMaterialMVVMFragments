@@ -4,14 +4,14 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kexamplematerialmvvmfragments.R
 import com.example.kexamplematerialmvvmfragments.model.entity.NoteDemoRV
 import com.example.kexamplematerialmvvmfragments.ui.fragments_demo_rv.ItemTouchHelperAdapter
 import com.example.kexamplematerialmvvmfragments.ui.fragments_demo_rv.ItemTouchHelperViewHolder
 import com.example.kexamplematerialmvvmfragments.ui.fragments_demo_rv.MyBaseViewHolder
-import kotlinx.android.synthetic.main.item_rv_small_simple.view.tv_description
-import kotlinx.android.synthetic.main.item_rv_small.view.tv_title
+
 
 
 class RVAdapter4 (fragmentContext: Context) : RecyclerView.Adapter<MyBaseViewHolder>(), ItemTouchHelperAdapter {
@@ -38,7 +38,7 @@ class RVAdapter4 (fragmentContext: Context) : RecyclerView.Adapter<MyBaseViewHol
     inner class SmallViewHolder(itemView: View) : MyBaseViewHolder(itemView), ItemTouchHelperViewHolder {
         // "находим" (для kotlin) нужные вьюшки и связываем их
         override fun bind(onlyOnePair: Pair<NoteDemoRV, Boolean>) {
-            itemView.tv_title.text = onlyOnePair.first.mTitle
+            itemView.findViewById<TextView>(R.id.tv_title).text = onlyOnePair.first.mTitle
 //            itemView.tv_id.text = onlyOnePair.second.toString()
 //            itemView.tv_description.text = onlyOnePair.first.mDescription
 
@@ -58,8 +58,8 @@ class RVAdapter4 (fragmentContext: Context) : RecyclerView.Adapter<MyBaseViewHol
     inner class MediumViewHolder(itemView: View) : MyBaseViewHolder(itemView) {
         // "находим" (для kotlin) нужные вьюшки и связываем их
         override fun bind(onlyOnePair: Pair<NoteDemoRV, Boolean>) {
-            itemView.tv_title.text = onlyOnePair.first.mTitle
-            itemView.tv_description.text = onlyOnePair.first.mDescription
+            itemView.findViewById<TextView>(R.id.tv_title).text = onlyOnePair.first.mTitle
+            itemView.findViewById<TextView>(R.id.tv_description).text = onlyOnePair.first.mDescription
 
         }
     }

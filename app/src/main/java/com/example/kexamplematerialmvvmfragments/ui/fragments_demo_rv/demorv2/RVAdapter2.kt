@@ -4,14 +4,13 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kexamplematerialmvvmfragments.R
 import com.example.kexamplematerialmvvmfragments.model.entity.NoteDemoRV
-import kotlinx.android.synthetic.main.item_rv_medium_simple.view.*
-import kotlinx.android.synthetic.main.item_rv_small_simple.view.*
-import kotlinx.android.synthetic.main.item_rv_small_simple.view.tv_description
-import kotlinx.android.synthetic.main.item_rv_small_simple.view.tv_title
+
 
 class RVAdapter2(fragmentContext: Context) : RecyclerView.Adapter<RVAdapter2.BaseViewHolder>() {
 
@@ -36,13 +35,14 @@ class RVAdapter2(fragmentContext: Context) : RecyclerView.Adapter<RVAdapter2.Bas
 
     // Первый ViewHolder
     inner class SmallViewHolder(itemView: View) : BaseViewHolder(itemView) {
-        // "находим" (для kotlin) нужные вьюшки и связываем их
+        private val tv_title = itemView.findViewById<TextView>(R.id.tv_title)
+        private val iv_arrow_down = itemView.findViewById<ImageView>(R.id.iv_arrow_down)
         override fun bind(onlyOnePair: Pair<NoteDemoRV, Boolean>) {
-            itemView.tv_title.text = onlyOnePair.first.mTitle
+            tv_title.text = onlyOnePair.first.mTitle
 //            itemView.tv_id.text = onlyOnePair.second.toString()
 //            itemView.tv_description.text = onlyOnePair.first.mDescription
 
-            itemView.iv_arrow_down.setOnClickListener {
+            iv_arrow_down.setOnClickListener {
                 toggleText(layoutPosition)
                 Toast.makeText(aContext, "layoutPosition: $layoutPosition", Toast.LENGTH_SHORT)
                     .show()
@@ -52,13 +52,13 @@ class RVAdapter2(fragmentContext: Context) : RecyclerView.Adapter<RVAdapter2.Bas
 
     // ВТОРОЙ ViewHolder
     inner class MediumViewHolder(itemView: View) : BaseViewHolder(itemView) {
-        // "находим" (для kotlin) нужные вьюшки и связываем их
+        private val tv_title = itemView.findViewById<TextView>(R.id.tv_title)
+        private val tv_description = itemView.findViewById<TextView>(R.id.tv_description)
+        private val iv_arrow_up = itemView.findViewById<ImageView>(R.id.iv_arrow_up)
         override fun bind(onlyOnePair: Pair<NoteDemoRV, Boolean>) {
-
-            itemView.tv_title.text = onlyOnePair.first.mTitle
-            itemView.tv_description.text = onlyOnePair.first.mDescription
-
-            itemView.iv_arrow_up.setOnClickListener { toggleText(layoutPosition) }
+            tv_title.text = onlyOnePair.first.mTitle
+            tv_description.text = onlyOnePair.first.mDescription
+            iv_arrow_up.setOnClickListener { toggleText(layoutPosition) }
         }
     }
 

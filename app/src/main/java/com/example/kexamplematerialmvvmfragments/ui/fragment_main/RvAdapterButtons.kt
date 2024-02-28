@@ -4,17 +4,15 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kexamplematerialmvvmfragments.R
 import com.example.kexamplematerialmvvmfragments.model.entity.NoteRvButton
-
-import com.example.kexamplematerialmvvmfragments.ui.fragments.buttons.ButtonsFragment
-import com.example.kexamplematerialmvvmfragments.ui.fragments.bottomsheet.BottomSheetFragment
 import com.example.kexamplematerialmvvmfragments.ui.fragments.buttons.pages.ButtonOneFragment
 import com.example.kexamplematerialmvvmfragments.ui.fragments.buttons.pages.ButtonThreeFragment
 import com.example.kexamplematerialmvvmfragments.ui.fragments.buttons.pages.ButtonTwoFragment
-import kotlinx.android.synthetic.main.item_rv_main_common.view.*
 
 class RvAdapterButtons(fragmentContext: Context) : RecyclerView.Adapter<RvAdapterButtons.ViewHolder>() {
 
@@ -32,20 +30,21 @@ class RvAdapterButtons(fragmentContext: Context) : RecyclerView.Adapter<RvAdapte
     // (#1) при создании vh - onCreateViewHolder (описан ниже) - в него передается itemView
     // (#2) при вызове у vh метода bind (описан ниже) - в него передается данные из array, чтобы связать с itemView
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+        private val tv_title = itemView.findViewById<TextView>(R.id.tv_title)
+        private val iv_pic = itemView.findViewById<ImageView>(R.id.iv_pic)
         // "находим" (для kotlin) нужные вьюшки и связываем их
         fun bind(adapterOnlyOneItemData: NoteRvButton) {
 //            itemView.setPaddingRelative(30, 0, 0 , 0)
 //            = TextView(context, null, 0, R.style.Headline1)
-            itemView.tv_title.text = adapterOnlyOneItemData.title
+            tv_title.text = adapterOnlyOneItemData.title
             when (adapterOnlyOneItemData.imageName) {
-                "rv_button_text" -> itemView.iv_pic.setImageResource(R.drawable.rv_button_text)
-                "rv_button_toggle" -> itemView.iv_pic.setImageResource(R.drawable.rv_button_toggle)
-                "rv_button_gradient" -> itemView.iv_pic.setImageResource(R.drawable.rv_button_gradient)
+                "rv_button_text" -> iv_pic.setImageResource(R.drawable.rv_button_text)
+                "rv_button_toggle" -> iv_pic.setImageResource(R.drawable.rv_button_toggle)
+                "rv_button_gradient" -> iv_pic.setImageResource(R.drawable.rv_button_gradient)
             }
 
             itemView.setOnClickListener {
-                val ttt: String = it.tv_title.text as String
+                val ttt: String = tv_title.text as String
                 val activity = adapterContext as AppCompatActivity
                 //вариант val activity = it.context as AppCompatActivity
                 when (ttt) {

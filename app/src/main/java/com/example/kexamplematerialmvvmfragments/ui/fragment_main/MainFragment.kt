@@ -1,7 +1,6 @@
 package com.example.kexamplematerialmvvmfragments.ui.fragment_main
 
 import android.os.Bundle
-import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kexamplematerialmvvmfragments.R
 import com.example.kexamplematerialmvvmfragments.ui.fragments_settings.ThemesFragment
 import com.example.kexamplematerialmvvmfragments.ui.fragments_settings.TypographyFragment
-import kotlinx.android.synthetic.main.main_fragment.*
+import com.example.kexamplematerialmvvmfragments.databinding.MainFragmentBinding
 
 
 class MainFragment : Fragment() {
@@ -23,6 +22,10 @@ class MainFragment : Fragment() {
 
     // (1) объявляем mViewModel
     private lateinit var viewModel: MainViewModel
+
+    private var _binding: MainFragmentBinding? = null
+    // Это свойство для удобного доступа к ненулевому биндингу
+    private val binding get() = _binding!!
 
     // объявляем adapter-ы
     lateinit var adapterSelections: RvAdapterSelections
@@ -37,33 +40,36 @@ class MainFragment : Fragment() {
     lateinit var adapterTabs: RvAdapterTabs
     lateinit var adapterAnimation: RvAdapterAnimation
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
-        return inflater.inflate(R.layout.main_fragment, container, false)
+        // (2) Инициализация биндинга
+        _binding = MainFragmentBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         // (2) наполнение mViewModel
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
 
         // First adapter
         // подтягиваем rv, кладем layout на rv
-        rv_buttons.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        binding.rvButtons.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         // инициализируем адаптер, кладем его на rv
-        adapterButtons = RvAdapterButtons(context!!)
-        rv_buttons.adapter = adapterButtons
+        adapterButtons = RvAdapterButtons(requireContext())
+        binding.rvButtons.adapter = adapterButtons
 
         // Next adapter
-        rv_edit_text.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        adapterEditView = RvAdapterEditView(context!!)
-        rv_edit_text.adapter = adapterEditView
+        binding.rvEditText.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        adapterEditView = RvAdapterEditView(requireContext())
+        binding.rvEditText.adapter = adapterEditView
 
         // Next adapter
-        rv_bottom_sheet.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        adapterBottomSheet = RvAdapterBottomSheet(context!!)
-        rv_bottom_sheet.adapter = adapterBottomSheet
+        binding.rvBottomSheet.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        adapterBottomSheet = RvAdapterBottomSheet(requireContext())
+        binding.rvBottomSheet.adapter = adapterBottomSheet
 
         // Next adapter
         //adapterChips = RvAdapterChips(context!!)
@@ -71,39 +77,39 @@ class MainFragment : Fragment() {
         //rv_chips.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
         // Next adapter
-        adapterConstraintLayout = RvAdapterConstraintLayout(context!!)
-        rv_constraint_layout.adapter = adapterConstraintLayout
-        rv_constraint_layout.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        adapterConstraintLayout = RvAdapterConstraintLayout(requireContext())
+        binding.rvConstraintLayout.adapter = adapterConstraintLayout
+        binding.rvConstraintLayout.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
         // Next adapter
-        adapterBottomNav = RvAdapterBottomNav(context!!)
-        rv_bottom_nav.adapter = adapterBottomNav
-        rv_bottom_nav.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        adapterBottomNav = RvAdapterBottomNav(requireContext())
+        binding.rvBottomNav.adapter = adapterBottomNav
+        binding.rvBottomNav.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
         // Next adapter
-        adapterBottomAppBar = RvAdapterBottomAppBar(context!!)
-        rv_bottom_app_bar.adapter = adapterBottomAppBar
-        rv_bottom_app_bar.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        adapterBottomAppBar = RvAdapterBottomAppBar(requireContext())
+        binding.rvBottomAppBar.adapter = adapterBottomAppBar
+        binding.rvBottomAppBar.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
         // Next adapter
-        adapterDemoRV = RvAdapterDemoRV(context!!)
-        rv_demo_rv.adapter = adapterDemoRV
-        rv_demo_rv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        adapterDemoRV = RvAdapterDemoRV(requireContext())
+        binding.rvDemoRv.adapter = adapterDemoRV
+        binding.rvDemoRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
         // Next adapter
-        adapterSelections = RvAdapterSelections(context!!)
-        rv_selections.adapter = adapterSelections
-        rv_selections.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        adapterSelections = RvAdapterSelections(requireContext())
+        binding.rvSelections.adapter = adapterSelections
+        binding.rvSelections.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
         // Next adapter
-        adapterTabs = RvAdapterTabs(context!!)
-        rv_tabs.adapter = adapterTabs
-        rv_tabs.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        adapterTabs = RvAdapterTabs(requireContext())
+        binding.rvTabs.adapter = adapterTabs
+        binding.rvTabs.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
         // Next adapter
-        adapterAnimation = RvAdapterAnimation(context!!)
-        rv_animation.adapter = adapterAnimation
-        rv_animation.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        adapterAnimation = RvAdapterAnimation(requireContext())
+        binding.rvAnimation.adapter = adapterAnimation
+        binding.rvAnimation.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
 //        card_bottom_sheet.setOnClickListener {
 //            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, BottomSheetFragment())?.addToBackStack(null)?.commit()
@@ -129,11 +135,11 @@ class MainFragment : Fragment() {
 //            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, RVFragment())?.addToBackStack(null)?.commit()
 //        }
 
-        card_typography.setOnClickListener {
+        binding.cardTypography.setOnClickListener {
             activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, TypographyFragment())?.addToBackStack(null)?.commit()
         }
 
-        card_themes.setOnClickListener {
+        binding.cardThemes.setOnClickListener {
             activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.container, ThemesFragment())?.addToBackStack(null)?.commit()
         }
 
@@ -189,7 +195,10 @@ class MainFragment : Fragment() {
         })
 
     }
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 
 //    fun mClickItem (ttt: String) {
 //        when (ttt) {

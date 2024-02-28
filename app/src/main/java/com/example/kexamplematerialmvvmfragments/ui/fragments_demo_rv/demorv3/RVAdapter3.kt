@@ -4,11 +4,13 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kexamplematerialmvvmfragments.R
 import com.example.kexamplematerialmvvmfragments.model.entity.NoteDemoRV
-import kotlinx.android.synthetic.main.item_rv_small.view.*
+
 
 
 class RVAdapter3 (fragmentContext: Context): RecyclerView.Adapter<RVAdapter3.BaseViewHolder>() {
@@ -35,12 +37,14 @@ class RVAdapter3 (fragmentContext: Context): RecyclerView.Adapter<RVAdapter3.Bas
 
     // Первый ViewHolder
     inner class SmallViewHolder(itemView: View) : BaseViewHolder(itemView) {
-        // "находим" (для kotlin) нужные вьюшки и связываем их
+        private val tv_title = itemView.findViewById<TextView>(R.id.tv_title)
+        private val tv_id = itemView.findViewById<TextView>(R.id.tv_id)
+        private val tv_description = itemView.findViewById<TextView>(R.id.tv_description)
         override fun bind(onlyOneNote: NoteDemoRV) {
 
-            itemView.tv_title.text = onlyOneNote.mTitle
-            itemView.tv_id.text = onlyOneNote.mId
-            itemView.tv_description.text = onlyOneNote.mDescription
+            tv_title.text = onlyOneNote.mTitle
+            tv_id.text = onlyOneNote.mId
+            tv_description.text = onlyOneNote.mDescription
 
             itemView.setOnClickListener {
                 Toast.makeText(aContext, "layoutPosition: $layoutPosition", Toast.LENGTH_SHORT).show()
@@ -63,16 +67,20 @@ class RVAdapter3 (fragmentContext: Context): RecyclerView.Adapter<RVAdapter3.Bas
 
     // ВТОРОЙ ViewHolder
     inner class MediumViewHolder(itemView: View) : BaseViewHolder(itemView) {
-        // "находим" (для kotlin) нужные вьюшки и связываем их
-        override fun bind(onlyOneNote: NoteDemoRV) {
-            itemView.tv_title.text = onlyOneNote.mTitle
-            itemView.tv_id.text = onlyOneNote.mId
-            itemView.tv_description.text = onlyOneNote.mDescription
+        private val tv_title = itemView.findViewById<TextView>(R.id.tv_title)
+        private val tv_id = itemView.findViewById<TextView>(R.id.tv_id)
+        private val tv_description = itemView.findViewById<TextView>(R.id.tv_description)
 
-            itemView.iv_add_item.setOnClickListener { addItem() }
-            itemView.iv_remove_item.setOnClickListener { removeItem() }
-            itemView.iv_downward_item.setOnClickListener { moveDown() }
-            itemView.iv_upward_item.setOnClickListener { moveUp() }
+
+        override fun bind(onlyOneNote: NoteDemoRV) {
+            tv_title.text = onlyOneNote.mTitle
+            tv_id.text = onlyOneNote.mId
+            tv_description.text = onlyOneNote.mDescription
+
+            itemView.findViewById<ImageView>(R.id.iv_add_item).setOnClickListener { addItem() }
+            itemView.findViewById<ImageView>(R.id.iv_remove_item).setOnClickListener { removeItem() }
+            itemView.findViewById<ImageView>(R.id.iv_downward_item).setOnClickListener { moveDown() }
+            itemView.findViewById<ImageView>(R.id.iv_upward_item).setOnClickListener { moveUp() }
         }
 
         private fun addItem() {
@@ -120,7 +128,7 @@ class RVAdapter3 (fragmentContext: Context): RecyclerView.Adapter<RVAdapter3.Bas
     inner class HeadersViewHolder(itemView: View) : BaseViewHolder (itemView) {
         // "находим" (для kotlin) нужные вьюшки и связываем их
         override fun bind(onlyOneNote: NoteDemoRV) {
-            itemView.tv_title.text = onlyOneNote.mTitle
+            itemView.findViewById<TextView>(R.id.tv_title).text = onlyOneNote.mTitle
         }
 
         private fun addItem() {

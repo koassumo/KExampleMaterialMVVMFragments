@@ -4,11 +4,12 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kexamplematerialmvvmfragments.R
 import com.example.kexamplematerialmvvmfragments.model.entity.NoteDemoRV
-import kotlinx.android.synthetic.main.item_rv_small.view.*
+
 
 class RVAdapter (fragmentContext: Context): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -33,24 +34,27 @@ class RVAdapter (fragmentContext: Context): RecyclerView.Adapter<RecyclerView.Vi
 
     // Первый ViewHolder
     inner class SmallViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        // "находим" (для kotlin) нужные вьюшки и связываем их
+        private val tv_title = itemView.findViewById<TextView>(R.id.tv_title)
+        private val tv_id = itemView.findViewById<TextView>(R.id.tv_id)
+        private val tv_description = itemView.findViewById<TextView>(R.id.tv_title)
+
         fun bind(onlyOneNote: NoteDemoRV) {
 
-            itemView.tv_title.text = onlyOneNote.mTitle
-            itemView.tv_id.text = onlyOneNote.mId
-            itemView.tv_description.text = onlyOneNote.mDescription
+            tv_title.text = onlyOneNote.mTitle
+            tv_id.text = onlyOneNote.mId
+            tv_description.text = onlyOneNote.mDescription
 
             itemView.setOnClickListener {
-                val ttt: String = it.tv_id.text as String
+                val ttt: String = tv_id.text as String
                 println("------------------------------------------------------------- after $ttt")
                 when (ttt) {
                     "11" ->  Toast.makeText(aContext, "1", Toast.LENGTH_SHORT).show()
                     "12" ->  Toast.makeText(aContext, "2", Toast.LENGTH_SHORT).show()
-                    "13" ->  Toast.makeText(aContext, it.tv_description.text, Toast.LENGTH_SHORT).show()
-                    "14" ->  Toast.makeText(aContext, it.tv_description.text, Toast.LENGTH_SHORT).show()
-                    "15" ->  Toast.makeText(aContext, it.tv_description.text, Toast.LENGTH_SHORT).show()
-                    "16" ->  Toast.makeText(aContext, it.tv_description.text, Toast.LENGTH_SHORT).show()
-                    "17" ->  Toast.makeText(aContext, it.tv_description.text, Toast.LENGTH_SHORT).show()
+                    "13" ->  Toast.makeText(aContext, tv_description.text, Toast.LENGTH_SHORT).show()
+                    "14" ->  Toast.makeText(aContext, tv_description.text, Toast.LENGTH_SHORT).show()
+                    "15" ->  Toast.makeText(aContext, tv_description.text, Toast.LENGTH_SHORT).show()
+                    "16" ->  Toast.makeText(aContext, tv_description.text, Toast.LENGTH_SHORT).show()
+                    "17" ->  Toast.makeText(aContext, tv_description.text, Toast.LENGTH_SHORT).show()
                 }
             }
 
@@ -60,19 +64,21 @@ class RVAdapter (fragmentContext: Context): RecyclerView.Adapter<RecyclerView.Vi
 
     // Второй ViewHolder
     inner class MediumViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        // "находим" (для kotlin) нужные вьюшки и связываем их
+        private val tv_title = itemView.findViewById<TextView>(R.id.tv_title)
+        private val tv_id = itemView.findViewById<TextView>(R.id.tv_id)
+        private val tv_description = itemView.findViewById<TextView>(R.id.tv_title)
         fun bind(onlyOneNote: NoteDemoRV) {
-            itemView.tv_title.text = onlyOneNote.mTitle
-            itemView.tv_id.text = onlyOneNote.mId
-            itemView.tv_description.text = onlyOneNote.mDescription
+            tv_title.text = onlyOneNote.mTitle
+            tv_id.text = onlyOneNote.mId
+            tv_description.text = onlyOneNote.mDescription
         }
     }
 
     // Третий ViewHolder (для TYPE_HEADERS)
     inner class HeadersViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        // "находим" (для kotlin) нужные вьюшки и связываем их
+        private val tv_title = itemView.findViewById<TextView>(R.id.tv_title)
         fun bind(onlyOneNote: NoteDemoRV) {
-            itemView.tv_title.text = onlyOneNote.mTitle
+            tv_title.text = onlyOneNote.mTitle
         }
     }
 

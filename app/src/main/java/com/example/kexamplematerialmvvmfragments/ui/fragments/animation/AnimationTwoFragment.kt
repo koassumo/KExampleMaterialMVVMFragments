@@ -11,8 +11,7 @@ import androidx.transition.ChangeBounds
 import androidx.transition.ChangeImageTransform
 import androidx.transition.TransitionManager
 import androidx.transition.TransitionSet
-import com.example.kexamplematerialmvvmfragments.R
-import kotlinx.android.synthetic.main.animation_two_fragment.*
+import com.example.kexamplematerialmvvmfragments.databinding.AnimationTwoFragmentBinding
 
 class AnimationTwoFragment : Fragment() {
 
@@ -22,40 +21,40 @@ class AnimationTwoFragment : Fragment() {
 
     private lateinit var viewModel: AnimationTwoViewModel
     private var isExpanded = false
+    private var _binding: AnimationTwoFragmentBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.animation_two_fragment, container, false)
+    ): View {
+        _binding = AnimationTwoFragmentBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(AnimationTwoViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel = ViewModelProvider(this)[AnimationTwoViewModel::class.java]
 
-        iv_anim_2.setOnClickListener {
+        binding.ivAnim2.setOnClickListener {
             isExpanded = !isExpanded
 
-            // описание перехода
             TransitionManager.beginDelayedTransition(
-                my_container_anim_2, TransitionSet()
+                binding.myContainerAnim2, TransitionSet()
                     .addTransition(ChangeBounds())
                     .addTransition(ChangeImageTransform())
             )
 
-            // описание целевого состояния
-            val params: ViewGroup.LayoutParams = iv_anim_2.layoutParams
+            val params: ViewGroup.LayoutParams = binding.ivAnim2.layoutParams
+            params.height = if (isExpanded) ViewGroup.LayoutParams.MATCH_PARENT else ViewGroup.LayoutParams.WRAP_CONTENT
+            binding.ivAnim2.layoutParams = params
 
-            params.height = if (isExpanded) ViewGroup.LayoutParams.MATCH_PARENT
-                            else            ViewGroup.LayoutParams.WRAP_CONTENT
-
-            iv_anim_2.layoutParams = params  // на кой? работает и без
-
-            iv_anim_2.scaleType = if (isExpanded)   ImageView.ScaleType.CENTER_CROP
-                                  else              ImageView.ScaleType.FIT_CENTER
+            binding.ivAnim2.scaleType = if (isExpanded) ImageView.ScaleType.CENTER_CROP else ImageView.ScaleType.FIT_CENTER
         }
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

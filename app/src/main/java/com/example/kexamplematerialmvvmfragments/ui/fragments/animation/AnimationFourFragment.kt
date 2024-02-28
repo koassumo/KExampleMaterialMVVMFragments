@@ -12,11 +12,11 @@ import androidx.core.view.ViewCompat
 import androidx.transition.ArcMotion
 import androidx.transition.ChangeBounds
 import androidx.transition.TransitionManager
-import com.example.kexamplematerialmvvmfragments.R
-import kotlinx.android.synthetic.main.animation_four_fragment.*
+import com.example.kexamplematerialmvvmfragments.databinding.AnimationFourFragmentBinding
 
 class AnimationFourFragment : Fragment() {
-
+    private var _binding: AnimationFourFragmentBinding? = null
+    private val binding get() = _binding!!
     companion object {
         fun newInstance() = AnimationFourFragment()
     }
@@ -26,12 +26,16 @@ class AnimationFourFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.animation_four_fragment, container, false)
+    ): View {
+        _binding = AnimationFourFragmentBinding.inflate(inflater, container, false)
+        return binding.root
     }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(AnimationFourViewModel::class.java)
         // TODO: Use the ViewModel
 
@@ -40,10 +44,10 @@ class AnimationFourFragment : Fragment() {
         for (i: Int in 0..444) {
             myTitles.add(String.format("Item %d   ", i+1))
         }
-        createViews(my_transition_container_4, myTitles)
+        createViews(binding.myTransitionContainer4, myTitles)
 
 
-        btn_444.setOnClickListener {
+        binding.btn444.setOnClickListener {
 
             val changeBounds = ChangeBounds()
             changeBounds.setPathMotion (ArcMotion())
@@ -51,7 +55,7 @@ class AnimationFourFragment : Fragment() {
 
 
             //описание перемещения
-            TransitionManager.beginDelayedTransition(my_transition_container_4, changeBounds)
+            TransitionManager.beginDelayedTransition(binding.myTransitionContainer4, changeBounds)
 
 //            вариант без задания начальной ChangeBounds
 //            TransitionManager.beginDelayedTransition(my_transition_container_4, ChangeBounds())
@@ -59,7 +63,7 @@ class AnimationFourFragment : Fragment() {
 
             // второе состояние - пересоздание вьюшек
             myTitles.shuffle()
-            createViews(my_transition_container_4, myTitles)
+            createViews(binding.myTransitionContainer4, myTitles)
         }
     }
 

@@ -1,69 +1,32 @@
-package com.example.kexamplematerialmvvmfragments.ui.fragments.navbar
-
-import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
 import androidx.fragment.app.Fragment
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.kexamplematerialmvvmfragments.R
-import com.example.kexamplematerialmvvmfragments.ui.fragments.navbar.pages.ItemOneFragment
-import com.example.kexamplematerialmvvmfragments.ui.fragments.navbar.pages.ItemThreeFragment
-import com.example.kexamplematerialmvvmfragments.ui.fragments.navbar.pages.ItemTwoFragment
-import kotlinx.android.synthetic.main.nav_bar_fragment.*
+import com.example.kexamplematerialmvvmfragments.databinding.NavBarFragmentBinding
+
 
 class BottomNavFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = BottomNavFragment()
-    }
+    private var _binding: NavBarFragmentBinding? = null
+    private val binding get() = _binding!!
 
-    private lateinit var viewModel: NavBarViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-
-        return inflater.inflate(R.layout.nav_bar_fragment, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        _binding = NavBarFragmentBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        childFragmentManager.beginTransaction()
-            .replace(R.id.bottom_container, ItemOneFragment())
-            .commitAllowingStateLoss()
-
-        bottom_navigation_view.setOnNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.bottom_item_one -> {
-                    childFragmentManager.beginTransaction()
-                        .replace(R.id.bottom_container, ItemOneFragment())
-                        .commitAllowingStateLoss()
-                    true
-                }
-                R.id.bottom_item_two -> {
-                    childFragmentManager.beginTransaction()
-                        .replace(R.id.bottom_container, ItemTwoFragment())
-                        .commitAllowingStateLoss()
-                    true
-                }
-                R.id.bottom_item_three -> {
-                    childFragmentManager.beginTransaction()
-                        .replace(R.id.bottom_container, ItemThreeFragment())
-                        .commitAllowingStateLoss()
-                    true
-                }
-                else -> {
-                    childFragmentManager.beginTransaction()
-                        .replace(R.id.bottom_container, ItemOneFragment())
-                        .commitAllowingStateLoss()
-                    true
-                }
-            }
-        }
+        setupBottomNavigationBar()
     }
 
+    private fun setupBottomNavigationBar() {
+        // Ваш код здесь, используйте binding.bottomNavigationView вместо bottom_navigation_view
+    }
 
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

@@ -4,6 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kexamplematerialmvvmfragments.R
@@ -11,8 +13,6 @@ import com.example.kexamplematerialmvvmfragments.model.entity.NoteRv
 import com.example.kexamplematerialmvvmfragments.ui.fragments.selections.CheckboxesFragment
 import com.example.kexamplematerialmvvmfragments.ui.fragments.selections.RadioFragment
 import com.example.kexamplematerialmvvmfragments.ui.fragments.selections.SwitchesFragment
-
-import kotlinx.android.synthetic.main.item_rv_main_common.view.*
 
 class RvAdapterSelections (fragmentContext: Context) : RecyclerView.Adapter<RvAdapterSelections.ViewHolder> (){
 
@@ -30,12 +30,14 @@ class RvAdapterSelections (fragmentContext: Context) : RecyclerView.Adapter<RvAd
     // (#1) при создании vh - onCreateViewHolder (описан ниже) - в него передается itemView
     // (#2) при вызове у vh метода bind (описан ниже) - в него передается данные из array, чтобы связать с itemView
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val tv_title = itemView.findViewById<TextView>(R.id.tv_title)
+        private val iv_pic = itemView.findViewById<ImageView>(R.id.iv_pic)
         fun bind(adapterOnlyOneItemData: NoteRv) {
-            itemView.tv_title.text = adapterOnlyOneItemData.title
+            tv_title.text = adapterOnlyOneItemData.title
             when (adapterOnlyOneItemData.imageName) {
-                "rv_checkboxes" -> itemView.iv_pic.setImageResource(R.drawable.rv_checkboxes)
-                "rv_radio" -> itemView.iv_pic.setImageResource(R.drawable.rv_radio)
-                "rv_switches" -> itemView.iv_pic.setImageResource(R.drawable.rv_switches)
+                "rv_checkboxes" -> iv_pic.setImageResource(R.drawable.rv_checkboxes)
+                "rv_radio" -> iv_pic.setImageResource(R.drawable.rv_radio)
+                "rv_switches" -> iv_pic.setImageResource(R.drawable.rv_switches)
             }
             itemView.setOnClickListener {
 //                val ttt: String = it.tv_title.text as String

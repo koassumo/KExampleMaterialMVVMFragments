@@ -21,7 +21,7 @@ class RVViewModel : ViewModel() {
     private fun updateListFirst() {
         //        var listData: MutableList<NoteDemoRV> = RepositoryDemoRV.getListNoteDemoRV().toMutableList()
         // добавляем headers в полученный список
-        var listData: MutableList<NoteDemoRV> = RepositoryDemoRV.getListNoteDemoRV().toMutableList()
+        val listData: MutableList<NoteDemoRV> = RepositoryDemoRV.getListNoteDemoRV().toMutableList()
         listData.add(0, NoteDemoRV(null, "This Is Top Header", null))
         var i = 4
         while (listData.size > i) {

@@ -8,46 +8,42 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.kexamplematerialmvvmfragments.R
-import kotlinx.android.synthetic.main.r_v_fragment.*
+import com.example.kexamplematerialmvvmfragments.databinding.RVFragmentBinding
+
 
 class RVFragment2 : Fragment() {
 
-    companion object {
-        fun newInstance() = RVFragment2()
-    }
+    private var _binding: RVFragmentBinding? = null
+    private val binding get() = _binding!!
 
     // (1) объявляем mViewModel
     private lateinit var viewModel: RVViewModel2
     // объявляем adapter
-    lateinit var adapter: RVAdapter2
+    private lateinit var adapter: RVAdapter2
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.r_v_fragment, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        _binding = RVFragmentBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        // (2) наполнение mViewModel
-        viewModel = ViewModelProvider(this).get(RVViewModel2::class.java)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel = ViewModelProvider(this)[RVViewModel2::class.java]
 
-        adapter = RVAdapter2 (context!!)
-        rv_items.adapter = adapter
-        rv_items.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        //rv_items.addItemDecoration(DividerItemDecoration(context, LinearLayoutManager.VERTICAL))
-        //fab_demo_rv.setOnClickListener { adapter.appendItem() }
+        adapter = RVAdapter2(requireContext())
+        binding.rvItems.adapter = adapter
+        binding.rvItems.layoutManager = LinearLayoutManager(context)
     }
 
     override fun onStart() {
         super.onStart()
-        //ChipsActivity4.start (this)
-//    <<<<<<<<<<<<<<<<[[[  2. Подписка на liveData
-//    <<<<<<<<<<<<<<<<[[[  *4. И сразу при Подписке описание реакции подписчика, 4ка выполнится позже
-        viewModel.liveData.observe(this, Observer {
-            adapter.aListPair = it     // вызов set
+        viewModel.liveData.observe(viewLifecycleOwner, Observer {
+            adapter.aListPair = it
         })
     }
 
-
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }
