@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+
 import com.example.kexamplematerialmvvmfragments.databinding.ThemesFragmentBinding
 import com.example.kexamplematerialmvvmfragments.ui.MainActivity.Companion.themeFlag
 
@@ -19,6 +20,9 @@ class ThemesFragment : Fragment() {
     private var _binding: ThemesFragmentBinding? = null
     private val binding get() = _binding!!
     private lateinit var viewModel: ThemesViewModel
+
+
+//    private var rootView: View? = null
 
     override fun onCreateView(
 
@@ -40,17 +44,43 @@ class ThemesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(ThemesViewModel::class.java)
-        // TODO: Use the ViewModel
-
     }
 
     override fun onResume() {
         super.onResume()
 
+//
+//        rootView?.findViewById<Button>(R.id.btnIndigo)?.setOnClickListener {
+//            themeFlag = 0
+//            activity?.recreate()
+//        }
+//
+//        rootView?.findViewById<Button>(R.id.btnGreen)?.setOnClickListener {
+//            themeFlag = 1
+//            activity?.recreate()
+//        }
+//
+//
+//
+//        rootView?.findViewById<Button>(R.id.btnBrown)?.setOnClickListener {
+//            themeFlag = 2
+//            activity?.recreate()
+//        }
+//
+//
+//
+//        rootView?.findViewById<Button>(R.id.btnYellow)?.setOnClickListener {
+//            themeFlag = 3
+//            activity?.recreate()
+//        }
+//
+
+
         binding.btnIndigo.setOnClickListener{
             themeFlag = 0
             activity?.recreate()
         }
+
 
         binding.btnGreen.setOnClickListener{
             themeFlag = 1
